@@ -3,7 +3,12 @@ name: Reporte diario Canontex
 on:
   schedule:
     - cron: "0 12 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: "Fecha a reportar (YYYY-MM-DD). Vacío = ayer."
+        required: false
+        type: string
 
 jobs:
   reporte:
@@ -21,7 +26,7 @@ jobs:
         env:
           OMS_USER: ${{ secrets.OMS_USER }}
           OMS_PASS: ${{ secrets.OMS_PASS }}
-        run: python reporte_diario.py
+        run: python reporte_diario.py ${{ inputs.fecha }}
 
       - name: Subir reporte como artefacto
         uses: actions/upload-artifact@v4

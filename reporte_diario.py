@@ -3,8 +3,9 @@ Reporte diario de ventas Canontex (OMSWeb).
 Ejecuta login, consulta el dashboard de ventas y genera un Excel diario.
 
 Uso:
-    python reporte_diario.py                # reporta el día de ayer
-    python reporte_diario.py 2026-07-10     # reporta una fecha específica
+    python reporte_diario.py                            # reporta el día de ayer
+    python reporte_diario.py 2026-07-10                 # reporta una fecha específica
+    python reporte_diario.py 2026-07-01 2026-07-10       # reporta un rango de fechas
 """
 import os
 import sys
@@ -51,7 +52,7 @@ def get_dashboard_venta(session: requests.Session, fecha_ini: datetime, fecha_fi
     return resp.json()
 
 
-def build_report(data: dict, fecha: datetime, output_path: str) -> None:
+def build_report(data: dict, fecha_inicio: datetime, fecha_fin: datetime, output_path: str) -> None:
     wb = Workbook()
     ws = wb.active
     ws.title = "Resumen"
@@ -60,7 +61,11 @@ def build_report(data: dict, fecha: datetime, output_path: str) -> None:
     header_fill = PatternFill(start_color="1F4E78", end_color="1F4E78", fill_type="solid")
     header_font = Font(bold=True, color="FFFFFF")
 
-    ws["A1"] = f"Reporte diario de ventas - Canontex - {fecha.strftime('%d-%m-%Y')}"
+    if fecha_inicio.date() == fecha_fin.date():
+        periodo = fecha_inicio.strftime("%d-%m-%Y")
+    else:
+        periodo = f"{fecha_inicio.strftime('%d-%m-%Y')} a {fecha_fin.strftime('%d-%m-%Y')}"
+    ws["A1"] = f"Reporte de ventas - Canontex - {periodo}"
     ws["A1"].font = Font(bold=True, size=14)
     ws.merge_cells("A1:D1")
 
@@ -148,18 +153,22 @@ def build_report(data: dict, fecha: datetime, output_path: str) -> None:
 
 def main():
     if len(sys.argv) > 1:
-        fecha = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+        fecha_inicio = datetime.strptime(sys.argv[1], "%Y-%m-%d")
+        fecha_fin = datetime.strptime(sys.argv[2], "%Y-%m-%d") if len(sys.argv) > 2 else fecha_inicio
     else:
-        fecha = datetime.now() - timedelta(days=1)
+        fecha_inicio = fecha_fin = datetime.now() - timedelta(days=1)
 
     session = requests.Session()
     login(session)
-    data = get_dashboard_venta(session, fecha, fecha)
+    data = get_dashboard_venta(session, fecha_inicio, fecha_fin)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    filename = f"reporte_ventas_{fecha.strftime('%Y-%m-%d')}.xlsx"
+    if fecha_inicio.date() == fecha_fin.date():
+        filename = f"reporte_ventas_{fecha_inicio.strftime('%Y-%m-%d')}.xlsx"
+    else:
+        filename = f"reporte_ventas_{fecha_inicio.strftime('%Y-%m-%d')}_a_{fecha_fin.strftime('%Y-%m-%d')}.xlsx"
     output_path = os.path.join(OUTPUT_DIR, filename)
-    build_report(data, fecha, output_path)
+    build_report(data, fecha_inicio, fecha_fin, output_path)
     print(f"Reporte generado: {output_path}")
 
 

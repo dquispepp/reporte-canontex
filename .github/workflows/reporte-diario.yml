@@ -5,8 +5,12 @@ on:
     - cron: "0 12 * * *"
   workflow_dispatch:
     inputs:
-      fecha:
-        description: "Fecha a reportar (YYYY-MM-DD). Vacío = ayer."
+      fecha_inicio:
+        description: "Fecha de inicio (YYYY-MM-DD). Vacío = ayer."
+        required: false
+        type: string
+      fecha_fin:
+        description: "Fecha de fin (YYYY-MM-DD). Vacío = ayer."
         required: false
         type: string
 
@@ -26,7 +30,7 @@ jobs:
         env:
           OMS_USER: ${{ secrets.OMS_USER }}
           OMS_PASS: ${{ secrets.OMS_PASS }}
-        run: python reporte_diario.py ${{ inputs.fecha }}
+        run: python reporte_diario.py ${{ inputs.fecha_inicio }} ${{ inputs.fecha_fin }}
 
       - name: Subir reporte como artefacto
         uses: actions/upload-artifact@v4

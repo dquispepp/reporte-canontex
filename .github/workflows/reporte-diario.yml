@@ -1,0 +1,31 @@
+name: Reporte diario Canontex
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  reporte:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install -r requirements.txt
+
+      - name: Generar reporte
+        env:
+          OMS_USER: ${{ secrets.OMS_USER }}
+          OMS_PASS: ${{ secrets.OMS_PASS }}
+        run: python reporte_diario.py
+
+      - name: Subir reporte como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: reporte-ventas
+          path: reportes/*.xlsx
+          retention-days: 90

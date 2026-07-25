@@ -1,10 +1,10 @@
 {
   "fecha": "2026-07-24",
   "total": {
-    "total_abiertos": 1464,
+    "total_abiertos": 1470,
     "atrasados": 595,
-    "pct_atrasados": 40.6,
-    "pct_otif": 59.4,
+    "pct_atrasados": 40.5,
+    "pct_otif": 59.5,
     "dias_atraso_prom": 22.9,
     "pct_sla_ecommerce": 37.2,
     "pct_sla_operacion": 55.7,
@@ -22,12 +22,12 @@
         64
       ],
       [
-        "Recontactar cliente",
-        31
-      ],
-      [
         "SAC devolución de dinero",
         28
+      ],
+      [
+        "Recontactar cliente",
+        26
       ],
       [
         "En ruta (atraso courier)",
@@ -42,6 +42,10 @@
         9
       ],
       [
+        "Entregado por FedEx, actualizar OMS",
+        5
+      ],
+      [
         "Revisar WMS: no despachado",
         4
       ],
@@ -52,10 +56,10 @@
     ]
   },
   "ecommerce": {
-    "total_abiertos": 823,
+    "total_abiertos": 829,
     "atrasados": 335,
-    "pct_atrasados": 40.7,
-    "pct_otif": 59.3,
+    "pct_atrasados": 40.4,
+    "pct_otif": 59.6,
     "dias_atraso_prom": 33.1,
     "pct_sla_ecommerce": 40.9,
     "pct_sla_operacion": 63.6,
@@ -78,11 +82,15 @@
       ],
       [
         "Recontactar cliente",
-        24
+        19
       ],
       [
         "En ruta (atraso courier)",
         9
+      ],
+      [
+        "Entregado por FedEx, actualizar OMS",
+        5
       ],
       [
         "Revisar WMS: no despachado",

@@ -1,151 +1,135 @@
 {
   "fecha": "2026-07-24",
   "total": {
-    "total_abiertos": 1843,
-    "atrasados": 992,
-    "pct_atrasados": 53.8,
-    "pct_otif": 46.2,
-    "dias_atraso_prom": 19.7,
-    "pct_sla_ecommerce": 35.3,
-    "pct_sla_operacion": 61.5,
+    "total_abiertos": 1464,
+    "atrasados": 595,
+    "pct_atrasados": 40.6,
+    "pct_otif": 59.4,
+    "dias_atraso_prom": 22.9,
+    "pct_sla_ecommerce": 37.2,
+    "pct_sla_operacion": 55.7,
     "diagnosticos": [
       [
         "Courier tiene pedido, estado no actualizado en OMS",
-        563
+        253
       ],
       [
         "En tienda, esperando retiro cliente",
-        233
+        185
       ],
       [
         "validar con SAC",
-        70
-      ],
-      [
-        "Revisar WMS: no despachado",
-        35
+        64
       ],
       [
         "Recontactar cliente",
-        33
+        31
       ],
       [
         "SAC devolución de dinero",
-        22
+        28
       ],
       [
         "En ruta (atraso courier)",
-        14
+        10
       ],
       [
         "Aún no sale, empujar operación",
-        11
+        10
       ],
       [
         "Courier no encontró destino",
-        6
-      ],
-      [
-        "Investigar por qué no llegó al WMS",
-        3
-      ],
-      [
-        "REVISAR MANUAL",
-        2
-      ]
-    ]
-  },
-  "ecommerce": {
-    "total_abiertos": 877,
-    "atrasados": 348,
-    "pct_atrasados": 39.7,
-    "pct_otif": 60.3,
-    "dias_atraso_prom": 28.8,
-    "pct_sla_ecommerce": 52.5,
-    "pct_sla_operacion": 69.8,
-    "diagnosticos": [
-      [
-        "En tienda, esperando retiro cliente",
-        135
-      ],
-      [
-        "Courier tiene pedido, estado no actualizado en OMS",
-        75
-      ],
-      [
-        "validar con SAC",
-        61
-      ],
-      [
-        "Recontactar cliente",
-        26
-      ],
-      [
-        "SAC devolución de dinero",
-        22
-      ],
-      [
-        "En ruta (atraso courier)",
-        13
-      ],
-      [
-        "Revisar WMS: no despachado",
         9
       ],
       [
+        "Revisar WMS: no despachado",
+        4
+      ],
+      [
         "Investigar por qué no llegó al WMS",
-        2
-      ],
-      [
-        "REVISAR MANUAL",
-        2
-      ],
-      [
-        "Aún no sale, empujar operación",
-        2
-      ],
-      [
-        "Courier no encontró destino",
         1
       ]
     ]
   },
-  "kiosco": {
-    "total_abiertos": 966,
-    "atrasados": 644,
-    "pct_atrasados": 66.7,
-    "pct_otif": 33.3,
-    "dias_atraso_prom": 14.8,
-    "pct_sla_ecommerce": 26.0,
-    "pct_sla_operacion": 57.0,
+  "ecommerce": {
+    "total_abiertos": 823,
+    "atrasados": 335,
+    "pct_atrasados": 40.7,
+    "pct_otif": 59.3,
+    "dias_atraso_prom": 33.1,
+    "pct_sla_ecommerce": 40.9,
+    "pct_sla_operacion": 63.6,
     "diagnosticos": [
       [
-        "Courier tiene pedido, estado no actualizado en OMS",
-        488
-      ],
-      [
         "En tienda, esperando retiro cliente",
-        98
+        138
       ],
       [
-        "Revisar WMS: no despachado",
-        26
+        "Courier tiene pedido, estado no actualizado en OMS",
+        70
       ],
       [
         "validar con SAC",
+        57
+      ],
+      [
+        "SAC devolución de dinero",
+        28
+      ],
+      [
+        "Recontactar cliente",
+        24
+      ],
+      [
+        "En ruta (atraso courier)",
         9
       ],
       [
+        "Revisar WMS: no despachado",
+        3
+      ],
+      [
         "Aún no sale, empujar operación",
-        9
+        3
+      ],
+      [
+        "Courier no encontró destino",
+        3
+      ]
+    ]
+  },
+  "kiosco": {
+    "total_abiertos": 641,
+    "atrasados": 260,
+    "pct_atrasados": 40.6,
+    "pct_otif": 59.4,
+    "dias_atraso_prom": 9.8,
+    "pct_sla_ecommerce": 33.5,
+    "pct_sla_operacion": 47.9,
+    "diagnosticos": [
+      [
+        "Courier tiene pedido, estado no actualizado en OMS",
+        183
+      ],
+      [
+        "En tienda, esperando retiro cliente",
+        47
       ],
       [
         "Recontactar cliente",
         7
       ],
       [
+        "validar con SAC",
+        7
+      ],
+      [
+        "Aún no sale, empujar operación",
+        7
+      ],
+      [
         "Courier no encontró destino",
-        5
+        6
       ],
       [
         "En ruta (atraso courier)",
@@ -153,6 +137,10 @@
       ],
       [
         "Investigar por qué no llegó al WMS",
+        1
+      ],
+      [
+        "Revisar WMS: no despachado",
         1
       ]
     ]

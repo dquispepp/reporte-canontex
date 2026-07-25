@@ -191,7 +191,6 @@
     </div>
 
     <script>
-        // Mapeo de diagnósticos a tipos (critical/warning/success)
         const diagTipos = {
             "Courier no ha hecho pickup": "critical",
             "En tienda, esperando retiro cliente": "warning",
@@ -206,8 +205,7 @@
 
         async function cargarDatos() {
             try {
-                // URL raw de GitHub (cambia el usuario/repo según sea necesario)
-                const url = "https://raw.githubusercontent.com/dquispe/reporte-canontex/master/dashboard-data.json";
+                const url = "https://raw.githubusercontent.com/dquispepp/reporte-canontex/master/dashboard-data.json";
                 const response = await fetch(url);
 
                 if (!response.ok) {
@@ -241,7 +239,6 @@
                 return;
             }
 
-            // Actualizar KPIs
             const kpisHTML = `
                 <div class="kpi critical">
                     <div class="kpi-label">Total Atrasados</div>
@@ -263,7 +260,6 @@
             document.getElementById('kpis').innerHTML = kpisHTML;
             document.getElementById('kpis').style.display = 'grid';
 
-            // Actualizar diagnósticos
             const diagHTML = d.diagnosticos
                 .filter(([nombre, count]) => count > 0)
                 .map(([nombre, count]) => {
@@ -280,7 +276,6 @@
             document.getElementById('diagnosticos-container').style.display = 'block';
         }
 
-        // Cargar datos al iniciar
         cargarDatos();
     </script>
 </body>

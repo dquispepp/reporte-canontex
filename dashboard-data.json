@@ -1,0 +1,154 @@
+{
+  "fecha": "2026-07-24",
+  "total": {
+    "total_abiertos": 1843,
+    "atrasados": 992,
+    "pct_atrasados": 53.8,
+    "pct_otif": 46.2,
+    "dias_atraso_prom": 19.7,
+    "diagnosticos": [
+      [
+        "Courier no ha hecho pickup",
+        563
+      ],
+      [
+        "En tienda, esperando retiro cliente",
+        233
+      ],
+      [
+        "validar con SAC",
+        70
+      ],
+      [
+        "Revisar WMS: no despachado",
+        35
+      ],
+      [
+        "Recontactar cliente",
+        33
+      ],
+      [
+        "SAC devolución de dinero",
+        22
+      ],
+      [
+        "En ruta (atraso courier)",
+        14
+      ],
+      [
+        "Aún no sale, empujar operación",
+        11
+      ],
+      [
+        "Courier no encontró destino",
+        6
+      ],
+      [
+        "Investigar por qué no llegó al WMS",
+        3
+      ],
+      [
+        "REVISAR MANUAL",
+        2
+      ]
+    ]
+  },
+  "ecommerce": {
+    "total_abiertos": 877,
+    "atrasados": 348,
+    "pct_atrasados": 39.7,
+    "pct_otif": 60.3,
+    "dias_atraso_prom": 28.8,
+    "diagnosticos": [
+      [
+        "En tienda, esperando retiro cliente",
+        135
+      ],
+      [
+        "Courier no ha hecho pickup",
+        75
+      ],
+      [
+        "validar con SAC",
+        61
+      ],
+      [
+        "Recontactar cliente",
+        26
+      ],
+      [
+        "SAC devolución de dinero",
+        22
+      ],
+      [
+        "En ruta (atraso courier)",
+        13
+      ],
+      [
+        "Revisar WMS: no despachado",
+        9
+      ],
+      [
+        "Investigar por qué no llegó al WMS",
+        2
+      ],
+      [
+        "REVISAR MANUAL",
+        2
+      ],
+      [
+        "Aún no sale, empujar operación",
+        2
+      ],
+      [
+        "Courier no encontró destino",
+        1
+      ]
+    ]
+  },
+  "kiosco": {
+    "total_abiertos": 966,
+    "atrasados": 644,
+    "pct_atrasados": 66.7,
+    "pct_otif": 33.3,
+    "dias_atraso_prom": 14.8,
+    "diagnosticos": [
+      [
+        "Courier no ha hecho pickup",
+        488
+      ],
+      [
+        "En tienda, esperando retiro cliente",
+        98
+      ],
+      [
+        "Revisar WMS: no despachado",
+        26
+      ],
+      [
+        "validar con SAC",
+        9
+      ],
+      [
+        "Aún no sale, empujar operación",
+        9
+      ],
+      [
+        "Recontactar cliente",
+        7
+      ],
+      [
+        "Courier no encontró destino",
+        5
+      ],
+      [
+        "En ruta (atraso courier)",
+        1
+      ],
+      [
+        "Investigar por qué no llegó al WMS",
+        1
+      ]
+    ]
+  }
+}

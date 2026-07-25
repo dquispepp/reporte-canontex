@@ -6,6 +6,7 @@
     "pct_atrasados": 53.8,
     "pct_otif": 46.2,
     "dias_atraso_prom": 19.7,
+    "pct_sla_72hrs": 30.7,
     "diagnosticos": [
       [
         "Courier tiene pedido, estado no actualizado en OMS",
@@ -59,6 +60,7 @@
     "pct_atrasados": 39.7,
     "pct_otif": 60.3,
     "dias_atraso_prom": 28.8,
+    "pct_sla_72hrs": 42.7,
     "diagnosticos": [
       [
         "En tienda, esperando retiro cliente",
@@ -112,6 +114,7 @@
     "pct_atrasados": 66.7,
     "pct_otif": 33.3,
     "dias_atraso_prom": 14.8,
+    "pct_sla_72hrs": 24.3,
     "diagnosticos": [
       [
         "Courier tiene pedido, estado no actualizado en OMS",

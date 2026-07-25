@@ -26,6 +26,17 @@ def _kpis(resultado, hoy_str):
     n_atr = len(atrasados)
     dias_prom = atrasados["dias_atraso"].mean()
     diag = [(k, v) for k, v in atrasados["diagnostico"].value_counts().items()]
+
+    # SLA Ecommerce: 48 horas creación → despacho
+    sla_ecom_cumplido = resultado[resultado["sla_ecommerce"] == True]
+    con_sla_ecom = resultado[resultado["sla_ecommerce"].notna()]
+    pct_sla_ecom = round(100 * len(sla_ecom_cumplido) / len(con_sla_ecom), 1) if len(con_sla_ecom) > 0 else 0
+
+    # SLA Operación: despacho → compromiso
+    sla_oper_cumplido = resultado[resultado["sla_operacion"] == True]
+    con_sla_oper = resultado[resultado["sla_operacion"].notna()]
+    pct_sla_oper = round(100 * len(sla_oper_cumplido) / len(con_sla_oper), 1) if len(con_sla_oper) > 0 else 0
+
     return {
         "fecha": hoy_str,
         "total_abiertos": total,
@@ -35,6 +46,8 @@ def _kpis(resultado, hoy_str):
         "dias_atraso_prom": round(dias_prom, 1) if pd.notna(dias_prom) else 0,
         "reserva_sin_ov": int(resultado["flag_reserva_sin_ov"].sum()),
         "no_wms": int(resultado["sin_ingreso_wms"].sum()),
+        "pct_sla_ecommerce": pct_sla_ecom,
+        "pct_sla_operacion": pct_sla_oper,
         "por_diagnostico": diag,
     }
 

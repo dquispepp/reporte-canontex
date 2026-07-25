@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Atrasos - Canontex</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #0f0f0f;
+            color: #e8e8e8;
+            padding: 0;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #ff1744;
+            flex-wrap: wrap;
+            gap: 20px;
+            background: #0f0f0f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        h1 { font-size: 32px; font-weight: 700; color: #ffffff; letter-spacing: 1px; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .fecha { font-size: 13px; color: #b0b0b0; }
+        .filtro-canal { display: flex; align-items: center; gap: 12px; }
+        .filtro-canal label { font-size: 12px; color: #b0b0b0; text-transform: uppercase; font-weight: 600; }
+        .filtro-canal select {
+            padding: 10px 14px;
+            border: 1px solid #ff1744;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #1a1a1a;
+            color: #ffffff;
+            cursor: pointer;
+        }
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+        }
+        .kpi {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff1744;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .kpi-label { font-size: 11px; color: #808080; text-transform: uppercase; margin-bottom: 8px; }
+        .kpi-value { font-size: 32px; font-weight: 700; color: #ffffff; }
+        .kpi-unit { font-size: 13px; color: #808080; margin-left: 4px; }
+        .kpi.critical .kpi-value { color: #ff1744; }
+        .kpi.success .kpi-value { color: #4caf50; }
+        .kpi.warning .kpi-value { color: #ffb300; }
+        .diagnosticos { background: #1a1a1a; padding: 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin: 40px 0; }
+        .diagnosticos h2 { font-size: 18px; margin-bottom: 20px; color: #ffffff; }
+        .diag-list { display: flex; flex-direction: column; gap: 12px; }
+        .diag-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 16px;
+            background: #252525;
+            border-radius: 6px;
+            border-left: 4px solid #ff1744;
+            font-size: 14px;
+        }
+        .diag-item.warning { border-left-color: #ffb300; }
+        .diag-item.success { border-left-color: #4caf50; }
+        .diag-name { flex: 1; color: #d0d0d0; }
+        .diag-count { font-weight: 700; font-size: 18px; color: #ff1744; }
+        .diag-item.warning .diag-count { color: #ffb300; }
+        .diag-item.success .diag-count { color: #4caf50; }
+        footer { text-align: center; font-size: 12px; color: #707070; margin-top: 60px; padding: 30px 0; border-top: 1px solid #333; }
+        @media (max-width: 640px) {
+            h1 { font-size: 24px; }
+            .kpis { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Pedidos Atrasados</h1>
+            <div class="header-right">
+                <div class="filtro-canal">
+                    <label>Canal:</label>
+                    <select id="canalSelect">
+                        <option value="total">Total</option>
+                        <option value="ecommerce">ECOMMERCE</option>
+                        <option value="kiosco">KIOSCO</option>
+                    </select>
+                </div>
+                <p class="fecha" id="fechaLabel">Cargando...</p>
+            </div>
+        </div>
+
+        <div id="kpis" class="kpis"></div>
+
+        <div class="diagnosticos">
+            <h2>📌 Diagnóstico de Causas (Top 10)</h2>
+            <div class="diag-list" id="diagList"></div>
+        </div>
+
+        <footer>
+            <p>🔄 Se actualiza automáticamente a las 7:00 y 13:00 | Dashboard Canontex Atrasos</p>
+        </footer>
+    </div>
+
+    <script>
+        let datosGlobal = null;
+
+        const diagTipos = {
+            "Courier tiene pedido, estado no actualizado en OMS": "warning",
+            "En tienda, esperando retiro cliente": "warning",
+            "En ruta (atraso courier)": "success",
+            "Aún no sale, empujar operación": "success",
+            "Courier no encontró destino": "success",
+        };
+
+        async function cargarDatos() {
+            try {
+                const response = await fetch('/dashboard-data.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                datosGlobal = await response.json();
+                document.getElementById('fechaLabel').textContent = `Última actualización: ${datosGlobal.fecha}`;
+                mostrarDatos('total');
+            } catch (error) {
+                console.error('Error cargando JSON:', error);
+                document.getElementById('kpis').innerHTML = `<p style="color: #ff1744;">Error: ${error.message}</p>`;
+            }
+        }
+
+        function mostrarDatos(canal) {
+            if (!datosGlobal) return;
+            const d = datosGlobal[canal];
+            if (!d) return;
+
+            // KPIs
+            const kpisHTML = `
+                <div class="kpi critical">
+                    <div class="kpi-label">Total Atrasados</div>
+                    <div class="kpi-value">${d.atrasados}<span class="kpi-unit">ped</span></div>
+                </div>
+                <div class="kpi critical">
+                    <div class="kpi-label">% OTIF</div>
+                    <div class="kpi-value">${d.pct_otif}<span class="kpi-unit">%</span></div>
+                </div>
+                <div class="kpi warning">
+                    <div class="kpi-label">Atraso Prom</div>
+                    <div class="kpi-value">${d.dias_atraso_prom}<span class="kpi-unit">d</span></div>
+                </div>
+                <div class="kpi ${d.pct_sla_ecommerce >= 50 ? 'success' : 'critical'}">
+                    <div class="kpi-label">SLA Ecommerce</div>
+                    <div class="kpi-value">${d.pct_sla_ecommerce}<span class="kpi-unit">%</span></div>
+                </div>
+                <div class="kpi ${d.pct_sla_operacion >= 50 ? 'success' : 'critical'}">
+                    <div class="kpi-label">SLA Operación</div>
+                    <div class="kpi-value">${d.pct_sla_operacion}<span class="kpi-unit">%</span></div>
+                </div>
+                <div class="kpi">
+                    <div class="kpi-label">Total Abiertos</div>
+                    <div class="kpi-value">${d.total_abiertos.toLocaleString('es-ES')}<span class="kpi-unit">ped</span></div>
+                </div>
+            `;
+            document.getElementById('kpis').innerHTML = kpisHTML;
+
+            // Diagnósticos
+            const diagHTML = d.diagnosticos
+                .filter(([_, count]) => count > 0)
+                .map(([nombre, count]) => {
+                    const tipo = diagTipos[nombre] || '';
+                    return `
+                        <div class="diag-item ${tipo}">
+                            <div class="diag-name">${nombre}</div>
+                            <div class="diag-count">${count}</div>
+                        </div>
+                    `;
+                }).join('');
+            document.getElementById('diagList').innerHTML = diagHTML;
+        }
+
+        document.getElementById('canalSelect').addEventListener('change', (e) => {
+            mostrarDatos(e.target.value);
+        });
+
+        cargarDatos();
+    </script>
+</body>
+</html>

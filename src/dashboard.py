@@ -148,12 +148,25 @@ def _kpis_por_canal(resultado, hoy_str):
         n_atr = len(atrasados)
         dias_prom = atrasados["dias_atraso"].mean() if len(atrasados) > 0 else 0
         diag = [(k, int(v)) for k, v in atrasados["diagnostico"].value_counts().items()]
+
+        # SLA Ecommerce: 48 horas creación → despacho
+        sla_ecom = len(df[df["sla_ecommerce"] == True])
+        con_sla_ecom = len(df[df["sla_ecommerce"].notna()])
+        pct_sla_ecom = round(100 * sla_ecom / con_sla_ecom, 1) if con_sla_ecom > 0 else 0
+
+        # SLA Operación: despacho → compromiso
+        sla_oper = len(df[df["sla_operacion"] == True])
+        con_sla_oper = len(df[df["sla_operacion"].notna()])
+        pct_sla_oper = round(100 * sla_oper / con_sla_oper, 1) if con_sla_oper > 0 else 0
+
         return {
             "total_abiertos": total,
             "atrasados": n_atr,
             "pct_atrasados": round(100 * n_atr / total, 1) if total else 0,
             "pct_otif": round(100 * (total - n_atr) / total, 1) if total else 0,
             "dias_atraso_prom": round(dias_prom, 1) if pd.notna(dias_prom) else 0,
+            "pct_sla_ecommerce": pct_sla_ecom,
+            "pct_sla_operacion": pct_sla_oper,
             "diagnosticos": diag,
         }
 

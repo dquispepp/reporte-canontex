@@ -8,7 +8,7 @@
     "dias_atraso_prom": 19.7,
     "diagnosticos": [
       [
-        "Courier no ha hecho pickup",
+        "Courier tiene pedido, estado no actualizado en OMS",
         563
       ],
       [
@@ -65,7 +65,7 @@
         135
       ],
       [
-        "Courier no ha hecho pickup",
+        "Courier tiene pedido, estado no actualizado en OMS",
         75
       ],
       [
@@ -114,7 +114,7 @@
     "dias_atraso_prom": 14.8,
     "diagnosticos": [
       [
-        "Courier no ha hecho pickup",
+        "Courier tiene pedido, estado no actualizado en OMS",
         488
       ],
       [

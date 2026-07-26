@@ -140,50 +140,55 @@ def build_dashboard(resultado, kpis, output_path, generado):
         f.write(html)
 
 
-def _kpis_por_canal(resultado, hoy_str):
-    """Calcula KPIs separados por canal (Total, ECOMMERCE, KIOSCO)."""
-    def calcular_kpis(df):
-        total = len(df)
-        atrasados = df[df["atrasado"]]
-        n_atr = len(atrasados)
-        dias_prom = atrasados["dias_atraso"].mean() if len(atrasados) > 0 else 0
-        diag = [(k, int(v)) for k, v in atrasados["diagnostico"].value_counts().items()]
+def _iso_dt(v):
+    return None if pd.isna(v) else pd.Timestamp(v).strftime("%Y-%m-%d")
 
-        # SLA Ecommerce: 48 horas creación → despacho
-        sla_ecom = len(df[df["sla_ecommerce"] == True])
-        con_sla_ecom = len(df[df["sla_ecommerce"].notna()])
-        pct_sla_ecom = round(100 * sla_ecom / con_sla_ecom, 1) if con_sla_ecom > 0 else 0
 
-        # SLA Operación: despacho → compromiso
-        sla_oper = len(df[df["sla_operacion"] == True])
-        con_sla_oper = len(df[df["sla_operacion"].notna()])
-        pct_sla_oper = round(100 * sla_oper / con_sla_oper, 1) if con_sla_oper > 0 else 0
+def _detalle_pedidos(df: pd.DataFrame) -> list:
+    """Detalle compacto por pedido: campos suficientes para filtros y KPIs cliente-side."""
+    out = []
+    for _, r in df.iterrows():
+        out.append({
+            "envio": r.get("num_envio", ""),
+            "canal": r.get("canal", ""),
+            "tipo_despacho": r.get("tipo_despacho", ""),
+            "familia": r.get("familia", ""),
+            "region": r.get("region", ""),
+            "estado": r.get("estado", ""),
+            "fecha_trx": _iso_dt(r.get("fecha_trx")),
+            "atrasado": bool(r.get("atrasado", False)),
+            "sla_ecommerce": None if pd.isna(r.get("sla_ecommerce")) else bool(r.get("sla_ecommerce")),
+            "sla_operacion": None if pd.isna(r.get("sla_operacion")) else bool(r.get("sla_operacion")),
+            "sla_courier": None if pd.isna(r.get("sla_courier")) else bool(r.get("sla_courier")),
+            "diagnostico": r.get("diagnostico", ""),
+            "dias_atraso": None if pd.isna(r.get("dias_atraso")) else int(r.get("dias_atraso")),
+        })
+    return out
 
-        return {
-            "total_abiertos": total,
-            "atrasados": n_atr,
-            "pct_atrasados": round(100 * n_atr / total, 1) if total else 0,
-            "pct_otif": round(100 * (total - n_atr) / total, 1) if total else 0,
-            "dias_atraso_prom": round(dias_prom, 1) if pd.notna(dias_prom) else 0,
-            "pct_sla_ecommerce": pct_sla_ecom,
-            "pct_sla_operacion": pct_sla_oper,
-            "diagnosticos": diag,
-        }
 
-    total = calcular_kpis(resultado)
-    ecommerce = calcular_kpis(resultado[resultado["canal"] == "ECOMMERCE"])
-    kiosco = calcular_kpis(resultado[resultado["canal"] == "KIOSCO"])
+def export_dashboard_json(resultado, hoy_str, output_path, anulados: int = 0):
+    """Exporta detalle + metadata. Los KPIs y filtros se calculan cliente-side en el HTML."""
+    # Solo canales relevantes y con fecha_trx valida
+    df = resultado[resultado["canal"].isin(("ECOMMERCE", "KIOSCO"))].copy()
+    detalle = _detalle_pedidos(df)
 
-    return {
+    # Universos disponibles para armar los selectores
+    canales = sorted({p["canal"] for p in detalle if p["canal"]})
+    tipos_desp = sorted({p["tipo_despacho"] for p in detalle if p["tipo_despacho"]})
+    familias = sorted({p["familia"] for p in detalle if p["familia"]})
+    meses = sorted({p["fecha_trx"][:7] for p in detalle if p["fecha_trx"]})
+
+    data = {
         "fecha": hoy_str,
-        "total": total,
-        "ecommerce": ecommerce,
-        "kiosco": kiosco,
+        "total_pedidos": len(detalle),
+        "anulados_excluidos": int(anulados),
+        "filtros": {
+            "canales": canales,
+            "tipos_despacho": tipos_desp,
+            "familias": familias,
+            "meses": meses,
+        },
+        "detalle": detalle,
     }
-
-
-def export_dashboard_json(resultado, hoy_str, output_path):
-    """Exporta datos del dashboard a JSON (para Vercel/Teams dashboard)."""
-    data = _kpis_por_canal(resultado, hoy_str)
     with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(data, f, ensure_ascii=False)

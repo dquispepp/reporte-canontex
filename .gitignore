@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# outputs de la rutina (se generan en OneDrive, no versionar)
+reportes/
+resumen_atrasos_*.xlsx
+dashboard_*.html
+dashboard.html
+
+# credenciales locales - NUNCA subir
+.env
+.env.local

@@ -18,6 +18,8 @@ import load
 import rules
 import report
 import dashboard
+import fedex
+import bigticket
 
 
 def _kpis(resultado, hoy_str):
@@ -37,6 +39,11 @@ def _kpis(resultado, hoy_str):
     con_sla_oper = resultado[resultado["sla_operacion"].notna()]
     pct_sla_oper = round(100 * len(sla_oper_cumplido) / len(con_sla_oper), 1) if len(con_sla_oper) > 0 else 0
 
+    # SLA Courier: última milla (solo Domicilio y Fecha Pactada, sobre pedidos entregados)
+    sla_cour_cumplido = resultado[resultado["sla_courier"] == True]
+    con_sla_cour = resultado[resultado["sla_courier"].notna()]
+    pct_sla_cour = round(100 * len(sla_cour_cumplido) / len(con_sla_cour), 1) if len(con_sla_cour) > 0 else 0
+
     return {
         "fecha": hoy_str,
         "total_abiertos": total,
@@ -48,6 +55,7 @@ def _kpis(resultado, hoy_str):
         "no_wms": int(resultado["sin_ingreso_wms"].sum()),
         "pct_sla_ecommerce": pct_sla_ecom,
         "pct_sla_operacion": pct_sla_oper,
+        "pct_sla_courier": pct_sla_cour,
         "por_diagnostico": diag,
     }
 
@@ -84,9 +92,25 @@ def main():
     _validar_cobertura(reporte, wms)
 
     piso = wms["fecha_creacion"].min()
-    cabecera = load.dedupe_cabecera(reporte, piso_fecha=piso)
+    # Incluir entregados/anulados para poder medir SLA Courier sobre el histórico completo.
+    cabecera = load.dedupe_cabecera(reporte, piso_fecha=piso, incluir_terminales=True)
+
+    # Anulados: se excluyen del pipeline pero se cuentan para mostrar como nota en el dashboard.
+    anulados_df = reporte[(reporte["estado"] == "Anulado") & (reporte["fecha_trx"] >= piso)] if piso is not None else reporte[reporte["estado"] == "Anulado"]
+    anulados_df = anulados_df.drop_duplicates(subset=["orden_compra_norm", "envio_norm"])
+    n_anulados = len(anulados_df)
+    print(f"[load] {n_anulados} anulados excluidos del cálculo (se muestran como nota)")
     merged = load.merge_sources(cabecera, wms)
     merged = load.attach_sap_quiebres(merged)
+    try:
+        merged = fedex.enrich_dataframe(merged)
+    except Exception as e:
+        print(f"[FEDEX] Skip (error consultando API): {e}")
+    try:
+        bt_path = load.BASE / "AUTO_INPUTS" / "bigticket_dump.json"
+        merged = bigticket.enrich_dataframe(merged, bt_path)
+    except Exception as e:
+        print(f"[BIGTICKET] Skip: {e}")
     resultado = rules.aplicar_reglas(merged, hoy)
 
     kpis = _kpis(resultado, hoy_str)
@@ -103,7 +127,7 @@ def main():
 
     # Generar JSON para dashboard Vercel (datos en vivo)
     json_path = Path(__file__).parent / "dashboard-data.json"
-    dashboard.export_dashboard_json(resultado, hoy_str, json_path)
+    dashboard.export_dashboard_json(resultado, hoy_str, json_path, anulados=n_anulados)
     _git_push_dashboard(json_path, hoy_str)
 
     # casos sin regla, para iterar

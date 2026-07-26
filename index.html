@@ -1,198 +1,196 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Atrasos - Canontex</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: #0f0f0f;
-            color: #e8e8e8;
-            padding: 0;
-        }
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-            border-bottom: 1px solid #ff1744;
-            flex-wrap: wrap;
-            gap: 20px;
-            background: #0f0f0f;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-        }
-        h1 { font-size: 32px; font-weight: 700; color: #ffffff; letter-spacing: 1px; }
-        .header-right { display: flex; align-items: center; gap: 20px; }
-        .fecha { font-size: 13px; color: #b0b0b0; }
-        .filtro-canal { display: flex; align-items: center; gap: 12px; }
-        .filtro-canal label { font-size: 12px; color: #b0b0b0; text-transform: uppercase; font-weight: 600; }
-        .filtro-canal select {
-            padding: 10px 14px;
-            border: 1px solid #ff1744;
-            border-radius: 4px;
-            font-size: 14px;
-            background: #1a1a1a;
-            color: #ffffff;
-            cursor: pointer;
-        }
-        .kpis {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 16px;
-            margin: 40px 0;
-        }
-        .kpi {
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #ff1744;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        .kpi-label { font-size: 11px; color: #808080; text-transform: uppercase; margin-bottom: 8px; }
-        .kpi-value { font-size: 32px; font-weight: 700; color: #ffffff; }
-        .kpi-unit { font-size: 13px; color: #808080; margin-left: 4px; }
-        .kpi.critical .kpi-value { color: #ff1744; }
-        .kpi.success .kpi-value { color: #4caf50; }
-        .kpi.warning .kpi-value { color: #ffb300; }
-        .diagnosticos { background: #1a1a1a; padding: 24px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); margin: 40px 0; }
-        .diagnosticos h2 { font-size: 18px; margin-bottom: 20px; color: #ffffff; }
-        .diag-list { display: flex; flex-direction: column; gap: 12px; }
-        .diag-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 16px;
-            background: #252525;
-            border-radius: 6px;
-            border-left: 4px solid #ff1744;
-            font-size: 14px;
-        }
-        .diag-item.warning { border-left-color: #ffb300; }
-        .diag-item.success { border-left-color: #4caf50; }
-        .diag-name { flex: 1; color: #d0d0d0; }
-        .diag-count { font-weight: 700; font-size: 18px; color: #ff1744; }
-        .diag-item.warning .diag-count { color: #ffb300; }
-        .diag-item.success .diag-count { color: #4caf50; }
-        footer { text-align: center; font-size: 12px; color: #707070; margin-top: 60px; padding: 30px 0; border-top: 1px solid #333; }
-        @media (max-width: 640px) {
-            h1 { font-size: 24px; }
-            .kpis { grid-template-columns: repeat(2, 1fr); }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard Atrasos — Cannon Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7f7;
+  --border: #e5e5e5;
+  --text: #1a1a1a;
+  --muted: #666;
+  --accent: #E30613;
+  --accent-soft: #ffecec;
+  --ok: #1f9d55;
+  --warn: #e0a800;
+  --bad: #c92a2a;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: var(--font-sans); background: var(--bg); color: var(--text);
+  font-size: 14px; line-height: 1.5;
+}
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 20px 32px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: #fff; position: sticky; top: 0; z-index: 10;
+}
+.brand img { height: 44px; display: block; }
+.subtitle { color: var(--muted); font-size: 13px; }
+main { max-width: 1400px; margin: 0 auto; padding: 28px 32px; }
+.filtros {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;
+  background: var(--surface); padding: 18px; border-radius: 8px; margin-bottom: 24px;
+  border: 1px solid var(--border);
+}
+.filtros label { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+.filtros select { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 6px; background: #fff; font-family: inherit; font-size: 14px; color: var(--text); cursor: pointer; }
+.filtros select:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 28px; }
+.kpi {
+  background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 18px 20px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.kpi:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+.kpi .label { font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); font-weight: 600; }
+.kpi .value { font-family: var(--font-serif); font-size: 34px; font-weight: 700; margin-top: 8px; color: var(--text); line-height: 1.1; }
+.kpi.accent .value { color: var(--accent); }
+.kpi.ok .value { color: var(--ok); }
+.kpi.bad .value { color: var(--bad); }
+.kpi .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
+section.diagnosticos { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; }
+section.diagnosticos h2 { font-family: var(--font-serif); margin: 0 0 16px; font-size: 22px; font-weight: 700; }
+.diag-list { display: grid; grid-template-columns: 1fr; gap: 4px; }
+.diag-row { display: grid; grid-template-columns: 1fr auto 60px; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 14px; }
+.diag-row:last-child { border-bottom: 0; }
+.diag-row .name { color: var(--text); }
+.diag-row .cnt { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; }
+.diag-row .bar { height: 6px; background: var(--accent-soft); border-radius: 3px; overflow: hidden; }
+.diag-row .bar .fill { height: 100%; background: var(--accent); }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
+.badge.periodo { background: var(--accent-soft); color: var(--accent); }
+footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px; }
+@media (max-width: 640px) {
+  header { padding: 14px 18px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  main { padding: 18px; }
+  .brand { font-size: 22px; }
+  .kpi .value { font-size: 28px; }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>📊 Pedidos Atrasados</h1>
-            <div class="header-right">
-                <div class="filtro-canal">
-                    <label>Canal:</label>
-                    <select id="canalSelect">
-                        <option value="total">Total</option>
-                        <option value="ecommerce">ECOMMERCE</option>
-                        <option value="kiosco">KIOSCO</option>
-                    </select>
-                </div>
-                <p class="fecha" id="fechaLabel">Cargando...</p>
-            </div>
-        </div>
+<header>
+  <div class="brand"><img src="logo_nuevo_cannon_.png" alt="Cannon Home"></div>
+  <div class="subtitle">Reporte de Atrasos · <span id="fecha-actual">—</span> · <span id="periodo-badge" class="badge periodo">—</span></div>
+</header>
 
-        <div id="kpis" class="kpis"></div>
+<main>
+  <section class="filtros">
+    <div><label for="fCanal">Canal</label><select id="fCanal"><option value="">Todos</option></select></div>
+    <div><label for="fTipo">Tipo de despacho</label><select id="fTipo"><option value="">Todos</option></select></div>
+    <div><label for="fFamilia">Familia (tipo producto)</label><select id="fFamilia"><option value="">Todas</option></select></div>
+    <div><label for="fMes">Mes (fecha Trx)</label><select id="fMes"><option value="">Todos</option></select></div>
+  </section>
 
-        <div class="diagnosticos">
-            <h2>📌 Diagnóstico de Causas (Top 10)</h2>
-            <div class="diag-list" id="diagList"></div>
-        </div>
+  <section class="kpis">
+    <div class="kpi"><div class="label">Total pedidos</div><div class="value" id="k-total">—</div><div class="sub" id="k-total-sub">—</div></div>
+    <div class="kpi bad"><div class="label">Atrasados</div><div class="value" id="k-atrasados">—</div><div class="sub" id="k-atrasados-sub">—</div></div>
+    <div class="kpi ok"><div class="label">% OTIF</div><div class="value" id="k-otif">—</div><div class="sub">no atrasados / total</div></div>
+    <div class="kpi accent"><div class="label">SLA Ecommerce</div><div class="value" id="k-sla-ecom">—</div><div class="sub">Creación WMS → Compromiso ≥ 72hrs</div></div>
+    <div class="kpi accent"><div class="label">SLA Operación</div><div class="value" id="k-sla-op">—</div><div class="sub">Despacho → Compromiso</div></div>
+    <div class="kpi accent"><div class="label">SLA Courier</div><div class="value" id="k-sla-cour">—</div><div class="sub">Última milla (Domicilio + Pactada)</div></div>
+  </section>
 
-        <footer>
-            <p>🔄 Se actualiza automáticamente a las 7:00 y 13:00 | Dashboard Canontex Atrasos</p>
-        </footer>
-    </div>
+  <section class="diagnosticos">
+    <h2>Diagnósticos de atrasados</h2>
+    <div class="diag-list" id="diag-list"></div>
+  </section>
+</main>
 
-    <script>
-        let datosGlobal = null;
+<footer>
+  Última actualización: <span id="fecha-generado">—</span>
+  <span id="footer-anulados" style="margin-left:12px; color:var(--muted);"></span>
+</footer>
 
-        const diagTipos = {
-            "Courier tiene pedido, estado no actualizado en OMS": "warning",
-            "En tienda, esperando retiro cliente": "warning",
-            "En ruta (atraso courier)": "success",
-            "Aún no sale, empujar operación": "success",
-            "Courier no encontró destino": "success",
-        };
+<script>
+let DATA = null;
 
-        async function cargarDatos() {
-            try {
-                const response = await fetch('/dashboard-data.json');
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                datosGlobal = await response.json();
-                document.getElementById('fechaLabel').textContent = `Última actualización: ${datosGlobal.fecha}`;
-                mostrarDatos('total');
-            } catch (error) {
-                console.error('Error cargando JSON:', error);
-                document.getElementById('kpis').innerHTML = `<p style="color: #ff1744;">Error: ${error.message}</p>`;
-            }
-        }
+async function cargar() {
+  const r = await fetch('dashboard-data.json?t=' + Date.now());
+  DATA = await r.json();
+  document.getElementById('fecha-actual').textContent = DATA.fecha;
+  document.getElementById('fecha-generado').textContent = DATA.fecha;
+  const anu = DATA.anulados_excluidos || 0;
+  document.getElementById('footer-anulados').textContent = anu ? `· ${anu.toLocaleString()} pedidos anulados excluidos del cálculo` : '';
+  llenarFiltros();
+  aplicar();
+}
 
-        function mostrarDatos(canal) {
-            if (!datosGlobal) return;
-            const d = datosGlobal[canal];
-            if (!d) return;
+function llenarFiltros() {
+  fill('fCanal', DATA.filtros.canales);
+  fill('fTipo', DATA.filtros.tipos_despacho);
+  fill('fFamilia', DATA.filtros.familias);
+  fill('fMes', DATA.filtros.meses);
+  ['fCanal','fTipo','fFamilia','fMes'].forEach(id => document.getElementById(id).addEventListener('change', aplicar));
+}
+function fill(id, arr) {
+  const s = document.getElementById(id);
+  arr.forEach(v => { const o = document.createElement('option'); o.value = v; o.textContent = v; s.appendChild(o); });
+}
 
-            // KPIs
-            const kpisHTML = `
-                <div class="kpi critical">
-                    <div class="kpi-label">Total Atrasados</div>
-                    <div class="kpi-value">${d.atrasados}<span class="kpi-unit">ped</span></div>
-                </div>
-                <div class="kpi critical">
-                    <div class="kpi-label">% OTIF</div>
-                    <div class="kpi-value">${d.pct_otif}<span class="kpi-unit">%</span></div>
-                </div>
-                <div class="kpi warning">
-                    <div class="kpi-label">Atraso Prom</div>
-                    <div class="kpi-value">${d.dias_atraso_prom}<span class="kpi-unit">d</span></div>
-                </div>
-                <div class="kpi ${d.pct_sla_ecommerce >= 50 ? 'success' : 'critical'}">
-                    <div class="kpi-label">SLA Ecommerce</div>
-                    <div class="kpi-value">${d.pct_sla_ecommerce}<span class="kpi-unit">%</span></div>
-                </div>
-                <div class="kpi ${d.pct_sla_operacion >= 50 ? 'success' : 'critical'}">
-                    <div class="kpi-label">SLA Operación</div>
-                    <div class="kpi-value">${d.pct_sla_operacion}<span class="kpi-unit">%</span></div>
-                </div>
-                <div class="kpi">
-                    <div class="kpi-label">Total Abiertos</div>
-                    <div class="kpi-value">${d.total_abiertos.toLocaleString('es-ES')}<span class="kpi-unit">ped</span></div>
-                </div>
-            `;
-            document.getElementById('kpis').innerHTML = kpisHTML;
+function filtrar() {
+  const c = document.getElementById('fCanal').value;
+  const t = document.getElementById('fTipo').value;
+  const f = document.getElementById('fFamilia').value;
+  const m = document.getElementById('fMes').value;
+  return DATA.detalle.filter(d =>
+    (!c || d.canal === c) &&
+    (!t || d.tipo_despacho === t) &&
+    (!f || d.familia === f) &&
+    (!m || (d.fecha_trx || '').startsWith(m))
+  );
+}
 
-            // Diagnósticos
-            const diagHTML = d.diagnosticos
-                .filter(([_, count]) => count > 0)
-                .map(([nombre, count]) => {
-                    const tipo = diagTipos[nombre] || '';
-                    return `
-                        <div class="diag-item ${tipo}">
-                            <div class="diag-name">${nombre}</div>
-                            <div class="diag-count">${count}</div>
-                        </div>
-                    `;
-                }).join('');
-            document.getElementById('diagList').innerHTML = diagHTML;
-        }
+function pct(numer, denom) { return denom > 0 ? (100 * numer / denom).toFixed(1) + '%' : '—'; }
 
-        document.getElementById('canalSelect').addEventListener('change', (e) => {
-            mostrarDatos(e.target.value);
-        });
+function aplicar() {
+  const rows = filtrar();
+  const total = rows.length;
+  const atrasados = rows.filter(d => d.atrasado);
+  const nAtr = atrasados.length;
 
-        cargarDatos();
-    </script>
+  document.getElementById('k-total').textContent = total.toLocaleString();
+  document.getElementById('k-total-sub').textContent = total === DATA.total_pedidos ? 'todos los pedidos' : 'filtrado';
+  document.getElementById('k-atrasados').textContent = nAtr.toLocaleString();
+  document.getElementById('k-atrasados-sub').textContent = pct(nAtr, total);
+  document.getElementById('k-otif').textContent = pct(total - nAtr, total);
+
+  const ecom = rows.filter(d => d.sla_ecommerce !== null);
+  const ecomOk = ecom.filter(d => d.sla_ecommerce === true).length;
+  document.getElementById('k-sla-ecom').textContent = pct(ecomOk, ecom.length);
+
+  const op = rows.filter(d => d.sla_operacion !== null);
+  const opOk = op.filter(d => d.sla_operacion === true).length;
+  document.getElementById('k-sla-op').textContent = pct(opOk, op.length);
+
+  const cour = rows.filter(d => d.sla_courier !== null);
+  const courOk = cour.filter(d => d.sla_courier === true).length;
+  document.getElementById('k-sla-cour').textContent = pct(courOk, cour.length);
+
+  const meses = document.getElementById('fMes').value;
+  document.getElementById('periodo-badge').textContent = meses || (DATA.filtros.meses[0] + ' → ' + DATA.filtros.meses.slice(-1)[0]);
+
+  const counter = {};
+  atrasados.forEach(d => { counter[d.diagnostico] = (counter[d.diagnostico] || 0) + 1; });
+  const arr = Object.entries(counter).sort((a,b) => b[1] - a[1]).slice(0, 10);
+  const max = arr[0]?.[1] || 1;
+  document.getElementById('diag-list').innerHTML = arr.length ? arr.map(([name, cnt]) => `
+    <div class="diag-row">
+      <div class="name">${name || 'Sin diagnóstico'}</div>
+      <div class="bar"><div class="fill" style="width:${(100*cnt/max)}%"></div></div>
+      <div class="cnt">${cnt}</div>
+    </div>`).join('') : '<div class="diag-row"><div class="name">Sin atrasados en el filtro</div></div>';
+}
+
+cargar();
+</script>
 </body>
 </html>

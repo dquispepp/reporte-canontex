@@ -1,25 +1,25 @@
 {
-  "fecha": "2026-07-25",
+  "fecha": "2026-07-26",
   "total": {
-    "total_abiertos": 1470,
-    "atrasados": 655,
-    "pct_atrasados": 44.6,
-    "pct_otif": 55.4,
-    "dias_atraso_prom": 21.6,
-    "pct_sla_ecommerce": 36.8,
-    "pct_sla_operacion": 55.4,
+    "total_abiertos": 1810,
+    "atrasados": 619,
+    "pct_atrasados": 34.2,
+    "pct_otif": 65.8,
+    "dias_atraso_prom": 22.3,
+    "pct_sla_ecommerce": 36.5,
+    "pct_sla_operacion": 55.5,
     "diagnosticos": [
       [
         "Courier tiene pedido, estado no actualizado en OMS",
-        281
+        275
       ],
       [
         "En tienda, esperando retiro cliente",
-        203
+        176
       ],
       [
         "validar con SAC",
-        69
+        66
       ],
       [
         "SAC devolución de dinero",
@@ -56,21 +56,21 @@
     ]
   },
   "ecommerce": {
-    "total_abiertos": 829,
-    "atrasados": 352,
-    "pct_atrasados": 42.5,
-    "pct_otif": 57.5,
-    "dias_atraso_prom": 32.1,
-    "pct_sla_ecommerce": 40.1,
-    "pct_sla_operacion": 63.1,
+    "total_abiertos": 1030,
+    "atrasados": 331,
+    "pct_atrasados": 32.1,
+    "pct_otif": 67.9,
+    "dias_atraso_prom": 33.4,
+    "pct_sla_ecommerce": 39.8,
+    "pct_sla_operacion": 62.6,
     "diagnosticos": [
       [
         "En tienda, esperando retiro cliente",
-        153
+        134
       ],
       [
         "Courier tiene pedido, estado no actualizado en OMS",
-        72
+        70
       ],
       [
         "validar con SAC",
@@ -107,29 +107,25 @@
     ]
   },
   "kiosco": {
-    "total_abiertos": 641,
-    "atrasados": 303,
-    "pct_atrasados": 47.3,
-    "pct_otif": 52.7,
+    "total_abiertos": 780,
+    "atrasados": 288,
+    "pct_atrasados": 36.9,
+    "pct_otif": 63.1,
     "dias_atraso_prom": 9.4,
     "pct_sla_ecommerce": 33.5,
-    "pct_sla_operacion": 47.9,
+    "pct_sla_operacion": 49.0,
     "diagnosticos": [
       [
         "Courier tiene pedido, estado no actualizado en OMS",
-        209
+        205
       ],
       [
         "En tienda, esperando retiro cliente",
-        50
+        42
       ],
       [
         "Entregado por FedEx, actualizar OMS",
         11
-      ],
-      [
-        "validar con SAC",
-        9
       ],
       [
         "Recontactar cliente",
@@ -141,6 +137,10 @@
       ],
       [
         "Courier no encontró destino",
+        6
+      ],
+      [
+        "validar con SAC",
         6
       ],
       [

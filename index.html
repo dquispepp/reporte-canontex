@@ -93,6 +93,7 @@ footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px
     <div><label for="fCanal">Canal</label><select id="fCanal"><option value="">Todos</option></select></div>
     <div><label for="fTipo">Tipo de despacho</label><select id="fTipo"><option value="">Todos</option></select></div>
     <div><label for="fFamilia">Familia (tipo producto)</label><select id="fFamilia"><option value="">Todas</option></select></div>
+    <div><label for="fTransp">Transportista</label><select id="fTransp"><option value="">Todos</option></select></div>
     <div><label for="fMes">Mes (fecha Trx)</label><select id="fMes"><option value="">Todos</option></select></div>
   </section>
 
@@ -134,8 +135,9 @@ function llenarFiltros() {
   fill('fCanal', DATA.filtros.canales);
   fill('fTipo', DATA.filtros.tipos_despacho);
   fill('fFamilia', DATA.filtros.familias);
+  fill('fTransp', DATA.filtros.transportistas || []);
   fill('fMes', DATA.filtros.meses);
-  ['fCanal','fTipo','fFamilia','fMes'].forEach(id => document.getElementById(id).addEventListener('change', aplicar));
+  ['fCanal','fTipo','fFamilia','fTransp','fMes'].forEach(id => document.getElementById(id).addEventListener('change', aplicar));
 }
 function fill(id, arr) {
   const s = document.getElementById(id);
@@ -146,11 +148,13 @@ function filtrar() {
   const c = document.getElementById('fCanal').value;
   const t = document.getElementById('fTipo').value;
   const f = document.getElementById('fFamilia').value;
+  const tr = document.getElementById('fTransp').value;
   const m = document.getElementById('fMes').value;
   return DATA.detalle.filter(d =>
     (!c || d.canal === c) &&
     (!t || d.tipo_despacho === t) &&
     (!f || d.familia === f) &&
+    (!tr || d.transportista === tr) &&
     (!m || (d.fecha_trx || '').startsWith(m))
   );
 }

@@ -82,16 +82,23 @@ def on_time_interno(fecha_despacho, fecha_esperada):
     return bool(fecha_despacho <= fecha_esperada)
 
 
-def fin_ventana_cliente(tipo_despacho, fecha_compromiso):
+def fin_ventana_cliente(tipo_despacho, fecha_compromiso, fecha_despacho=None):
     """Fecha limite para marcar el pedido como atrasado.
-    Domicilio: fecha_compromiso + 2 dias hábiles (buffer negociado con el cliente).
-    Resto (Fecha Pactada, Retiro en Tienda, Cross Docking): fecha_compromiso exacta.
+    - Despacho a Domicilio: fecha_compromiso + 2 días hábiles (buffer negociado con el cliente).
+    - Retiro en Tienda / Cross Docking: fecha_despacho + 7 días corridos (plazo cliente para retirar).
+      Si aún no está despachado, cae a fecha_compromiso.
+    - Fecha Pactada u otros: fecha_compromiso exacta.
     """
-    if pd.isna(fecha_compromiso):
-        return pd.NaT
-    if str(tipo_despacho).strip() == "Despacho a Domicilio":
+    td = str(tipo_despacho).strip()
+    if td == "Despacho a Domicilio":
+        if pd.isna(fecha_compromiso):
+            return pd.NaT
         return sumar_habiles(fecha_compromiso, 2)
-    return fecha_compromiso
+    if td in ("Retiro en Tienda", "Cross Docking"):
+        if not pd.isna(fecha_despacho):
+            return pd.Timestamp(fecha_despacho) + pd.Timedelta(days=7)
+        return fecha_compromiso if not pd.isna(fecha_compromiso) else pd.NaT
+    return fecha_compromiso if not pd.isna(fecha_compromiso) else pd.NaT
 
 
 def sla_courier(tipo_despacho, fecha_entrega_real, fecha_compromiso) -> bool:
@@ -164,14 +171,24 @@ def diagnostico(row) -> str:
         return "Investigar por qué no llegó al WMS"
 
     if er == "Preparado":
+        if td == "Cross Docking":
+            # Cross Docking: la mercadería sale de bodega origen y va a tienda destino
+            # para retiro del cliente. No hay courier de última milla.
+            if ew == "Despachada":
+                return "En tienda, esperando retiro cliente"
+            return "Revisar WMS: no despachado"
         if ew == "Despachada":
             return "Courier tiene pedido, estado no actualizado en OMS"
         return "Revisar WMS: no despachado"
 
     if er in ("En Courier", "En Tránsito") and ew == "Despachada":
+        if td == "Cross Docking":
+            return "En tienda, esperando retiro cliente"
         return "En ruta (atraso courier)"
 
     if er == "Devuelto a Bodega":
+        if td == "Cross Docking":
+            return "Retorno a bodega, revisar"
         return "Courier no encontró destino"
 
     if er == "Rechazado":
@@ -237,7 +254,7 @@ def aplicar_reglas(df: pd.DataFrame, hoy: pd.Timestamp) -> pd.DataFrame:
         lambda r: on_time_interno(r.get("fecha_despacho"), r["fecha_despacho_esperada"]), axis=1
     )
     df["fin_ventana"] = df.apply(
-        lambda r: fin_ventana_cliente(r.get("tipo_despacho"), r.get("fecha_compromiso")), axis=1
+        lambda r: fin_ventana_cliente(r.get("tipo_despacho"), r.get("fecha_compromiso"), r.get("fecha_despacho")), axis=1
     )
     # Atrasado: solo aplica a pedidos NO entregados aún. Entregados evalúan SLA Courier.
     _terminales = ("Entregado", "Anulado")

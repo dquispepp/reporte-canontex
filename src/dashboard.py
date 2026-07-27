@@ -154,6 +154,7 @@ def _detalle_pedidos(df: pd.DataFrame) -> list:
             "tipo_despacho": r.get("tipo_despacho", ""),
             "familia": r.get("familia", ""),
             "region": r.get("region", ""),
+            "transportista": r.get("transportista_norm", ""),
             "estado": r.get("estado", ""),
             "fecha_trx": _iso_dt(r.get("fecha_trx")),
             "atrasado": bool(r.get("atrasado", False)),
@@ -176,6 +177,7 @@ def export_dashboard_json(resultado, hoy_str, output_path, anulados: int = 0):
     canales = sorted({p["canal"] for p in detalle if p["canal"]})
     tipos_desp = sorted({p["tipo_despacho"] for p in detalle if p["tipo_despacho"]})
     familias = sorted({p["familia"] for p in detalle if p["familia"]})
+    transportistas = sorted({p["transportista"] for p in detalle if p["transportista"]})
     meses = sorted({p["fecha_trx"][:7] for p in detalle if p["fecha_trx"]})
 
     data = {
@@ -186,6 +188,7 @@ def export_dashboard_json(resultado, hoy_str, output_path, anulados: int = 0):
             "canales": canales,
             "tipos_despacho": tipos_desp,
             "familias": familias,
+            "transportistas": transportistas,
             "meses": meses,
         },
         "detalle": detalle,

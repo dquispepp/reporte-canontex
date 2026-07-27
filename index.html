@@ -55,6 +55,12 @@ main { max-width: 1400px; margin: 0 auto; padding: 28px 32px; }
 .kpi.accent .value { color: var(--accent); }
 .kpi.ok .value { color: var(--ok); }
 .kpi.bad .value { color: var(--bad); }
+.kpi.sem-good { border-left: 4px solid var(--ok); }
+.kpi.sem-good .value { color: var(--ok); }
+.kpi.sem-warn { border-left: 4px solid var(--warn); }
+.kpi.sem-warn .value { color: var(--warn); }
+.kpi.sem-bad { border-left: 4px solid var(--bad); }
+.kpi.sem-bad .value { color: var(--bad); }
 .kpi .sub { font-size: 12px; color: var(--muted); margin-top: 4px; }
 section.diagnosticos { background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; }
 section.diagnosticos h2 { font-family: var(--font-serif); margin: 0 0 16px; font-size: 22px; font-weight: 700; }
@@ -91,12 +97,12 @@ footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px
   </section>
 
   <section class="kpis">
-    <div class="kpi"><div class="label">Total pedidos</div><div class="value" id="k-total">—</div><div class="sub" id="k-total-sub">—</div></div>
-    <div class="kpi bad"><div class="label">Atrasados</div><div class="value" id="k-atrasados">—</div><div class="sub" id="k-atrasados-sub">—</div></div>
-    <div class="kpi ok"><div class="label">% OTIF</div><div class="value" id="k-otif">—</div><div class="sub">no atrasados / total</div></div>
-    <div class="kpi accent"><div class="label">SLA Ecommerce</div><div class="value" id="k-sla-ecom">—</div><div class="sub">Creación WMS → Compromiso ≥ 72hrs</div></div>
-    <div class="kpi accent"><div class="label">SLA Operación</div><div class="value" id="k-sla-op">—</div><div class="sub">Despacho → Compromiso</div></div>
-    <div class="kpi accent"><div class="label">SLA Courier</div><div class="value" id="k-sla-cour">—</div><div class="sub">Última milla (Domicilio + Pactada)</div></div>
+    <div class="kpi" id="kpi-total"><div class="label">Total Pedidos</div><div class="value" id="k-total">—</div><div class="sub" id="k-total-sub">—</div></div>
+    <div class="kpi" id="kpi-atrasados"><div class="label">Atrasados</div><div class="value" id="k-atrasados">—</div><div class="sub" id="k-atrasados-sub">—</div></div>
+    <div class="kpi" id="kpi-otif"><div class="label">% OTIF</div><div class="value" id="k-otif">—</div><div class="sub">No atrasados / total</div></div>
+    <div class="kpi" id="kpi-ecom"><div class="label">SLA Ecommerce</div><div class="value" id="k-sla-ecom">—</div><div class="sub">Creación WMS → Compromiso ≥ 72hrs</div></div>
+    <div class="kpi" id="kpi-op"><div class="label">SLA Operación</div><div class="value" id="k-sla-op">—</div><div class="sub">Despacho → Compromiso</div></div>
+    <div class="kpi" id="kpi-cour"><div class="label">SLA Courier</div><div class="value" id="k-sla-cour">—</div><div class="sub">Última Milla (Domicilio + Pactada)</div></div>
   </section>
 
   <section class="diagnosticos">
@@ -150,6 +156,20 @@ function filtrar() {
 }
 
 function pct(numer, denom) { return denom > 0 ? (100 * numer / denom).toFixed(1) + '%' : '—'; }
+function pctNum(numer, denom) { return denom > 0 ? (100 * numer / denom) : null; }
+function semaforo(kpiId, valor, opciones = {}) {
+  // opciones.invertido = true -> mas bajo es mejor (para "Atrasados")
+  const el = document.getElementById(kpiId);
+  el.classList.remove('sem-good', 'sem-warn', 'sem-bad');
+  if (valor === null || valor === undefined) return;
+  const good = opciones.invertido ? valor <= 10 : valor >= 90;
+  const warn = opciones.invertido ? valor <= 30 : valor >= 70;
+  el.classList.add(good ? 'sem-good' : (warn ? 'sem-warn' : 'sem-bad'));
+}
+function titulo(s) {
+  if (!s) return '';
+  return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+}
 
 function aplicar() {
   const rows = filtrar();
@@ -158,22 +178,30 @@ function aplicar() {
   const nAtr = atrasados.length;
 
   document.getElementById('k-total').textContent = total.toLocaleString();
-  document.getElementById('k-total-sub').textContent = total === DATA.total_pedidos ? 'todos los pedidos' : 'filtrado';
+  document.getElementById('k-total-sub').textContent = total === DATA.total_pedidos ? 'Todos los pedidos' : 'Filtrado';
   document.getElementById('k-atrasados').textContent = nAtr.toLocaleString();
   document.getElementById('k-atrasados-sub').textContent = pct(nAtr, total);
+  const pAtr = pctNum(nAtr, total);
+  semaforo('kpi-atrasados', pAtr, {invertido: true});
+
+  const pOtif = pctNum(total - nAtr, total);
   document.getElementById('k-otif').textContent = pct(total - nAtr, total);
+  semaforo('kpi-otif', pOtif);
 
   const ecom = rows.filter(d => d.sla_ecommerce !== null);
   const ecomOk = ecom.filter(d => d.sla_ecommerce === true).length;
   document.getElementById('k-sla-ecom').textContent = pct(ecomOk, ecom.length);
+  semaforo('kpi-ecom', pctNum(ecomOk, ecom.length));
 
   const op = rows.filter(d => d.sla_operacion !== null);
   const opOk = op.filter(d => d.sla_operacion === true).length;
   document.getElementById('k-sla-op').textContent = pct(opOk, op.length);
+  semaforo('kpi-op', pctNum(opOk, op.length));
 
   const cour = rows.filter(d => d.sla_courier !== null);
   const courOk = cour.filter(d => d.sla_courier === true).length;
   document.getElementById('k-sla-cour').textContent = pct(courOk, cour.length);
+  semaforo('kpi-cour', pctNum(courOk, cour.length));
 
   const meses = document.getElementById('fMes').value;
   document.getElementById('periodo-badge').textContent = meses || (DATA.filtros.meses[0] + ' → ' + DATA.filtros.meses.slice(-1)[0]);
@@ -184,7 +212,7 @@ function aplicar() {
   const max = arr[0]?.[1] || 1;
   document.getElementById('diag-list').innerHTML = arr.length ? arr.map(([name, cnt]) => `
     <div class="diag-row">
-      <div class="name">${name || 'Sin diagnóstico'}</div>
+      <div class="name">${titulo(name) || 'Sin diagnóstico'}</div>
       <div class="bar"><div class="fill" style="width:${(100*cnt/max)}%"></div></div>
       <div class="cnt">${cnt}</div>
     </div>`).join('') : '<div class="diag-row"><div class="name">Sin atrasados en el filtro</div></div>';

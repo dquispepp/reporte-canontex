@@ -1,0 +1,13 @@
+{
+  "last_updated": "2026-08-11",
+  "fuente": "Pipeline atrasos diario (OMS + WMS + FedEx + BigTicket)",
+  "archivos": {
+    "atrasos_tendencia.csv": "Historico diario de KPIs de atrasos (acumulativo)",
+    "atrasos_historico.json": "Mismo historico en JSON",
+    "atrasos_por_diagnostico.csv": "Desglose de atrasados por diagnostico",
+    "atrasos_por_courier.csv": "Rendimiento por transportista (atrasados)",
+    "atrasos_por_tienda.csv": "Retiros pendientes por tienda",
+    "atrasos_por_tipo_despacho.csv": "Atrasados por tipo de despacho",
+    "atrasos_detalle_top50.csv": "Top 50 pedidos mas atrasados con detalle"
+  }
+}

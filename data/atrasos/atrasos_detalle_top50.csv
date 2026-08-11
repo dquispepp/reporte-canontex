@@ -1,0 +1,51 @@
+﻿envio,canal,estado,tipo_despacho,transportista,dias_atraso,diagnostico,region,fecha_trx
+000987598,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,155.0,SAC devolución de dinero,Metropolitana,2025-12-16
+000988600,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,151.0,SAC devolución de dinero,Metropolitana,2025-12-17
+000990691,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,151.0,"En tienda, esperando retiro cliente",Metropolitana,2025-12-22
+000994222,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,145.0,SAC devolución de dinero,Metropolitana,2026-01-02
+000987613,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,144.0,"En tienda, esperando retiro cliente",Metropolitana,2025-12-16
+000990556,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,144.0,SAC devolución de dinero,Valparaíso,2025-12-21
+000990697,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,144.0,SAC devolución de dinero,Valparaíso,2025-12-21
+000991006,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,143.0,"En tienda, esperando retiro cliente",Libertador General Bernardo OHiggins,2025-12-22
+000992632,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,143.0,SAC devolución de dinero,Metropolitana,2025-12-28
+000998042,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,133.0,"En tienda, esperando retiro cliente",Metropolitana,2026-01-12
+001003244,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,129.0,SAC devolución de dinero,Metropolitana,2026-01-22
+001004570,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,129.0,SAC devolución de dinero,Metropolitana,2026-01-25
+001004402,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,122.0,"En tienda, esperando retiro cliente",Metropolitana,2026-01-25
+001010417,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,118.0,"En tienda, esperando retiro cliente",Metropolitana,2026-02-06
+001011143,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,118.0,SAC devolución de dinero,Libertador General Bernardo OHiggins,2026-02-07
+001012565,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,116.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-10
+001015721,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,114.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-17
+001013879,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-13
+001014950,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-16
+001015034,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-16
+001015196,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-16
+001015637,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-17
+001015691,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-17
+001015862,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-18
+001016027,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-18
+001016120,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-02-18
+001016516,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,109.0,"En tienda, esperando retiro cliente",Metropolitana,2026-02-19
+001028213,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,95.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-16
+001029675,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,93.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-20
+001030839,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,87.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21
+001030968,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,87.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21
+001031043,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,87.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21
+001032531,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,87.0,"En tienda, esperando retiro cliente",Bío Bío,2026-03-22
+001033557,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,87.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-23
+001039980,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,87.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-30
+001037349,ECOMMERCE,Rechazado,Despacho a Domicilio,BigTicket,86.0,Recontactar cliente,Metropolitana,2026-03-27
+001038888,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,86.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-29
+001038975,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,86.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-29
+001041822,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,85.0,SAC devolución de dinero,Metropolitana,2026-03-31
+001035759,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,82.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-26
+001036503,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,80.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-27
+001038726,ECOMMERCE,Preparado,Despacho a Domicilio,BigTicket,79.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-29
+001043703,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,77.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-02
+001048663,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,76.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-04-08
+001050133,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,74.0,"En tienda, esperando retiro cliente",Libertador General Bernardo OHiggins,2026-04-10
+001051558,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,74.0,"Courier tiene pedido, estado no actualizado en OMS",Libertador General Bernardo OHiggins,2026-04-13
+001053268,ECOMMERCE,Rechazado,Despacho a Domicilio,BigTicket,72.0,Recontactar cliente,Metropolitana,2026-04-18
+001054438,ECOMMERCE,En Courier,Despacho a Domicilio,FedEx,71.0,En ruta (atraso courier),Bío Bío,2026-04-21
+001053592,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,68.0,"En tienda, esperando retiro cliente",Los Lagos,2026-04-19
+001054135,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,68.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-20

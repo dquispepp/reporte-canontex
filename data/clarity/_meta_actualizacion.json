@@ -5,8 +5,11 @@
   "sitio": "cannonhome.cl",
   "ventana_datos": "ultimos 3 dias",
   "archivos": [
-    "clarity_funnel.csv - Metricas de friccion por etapa del funnel",
-    "clarity_paginas.csv - Top paginas con mayor friccion",
-    "clarity_historial.json - Historial diario acumulado"
+    "clarity_funnel.csv - Friccion por etapa del funnel (Clarity)",
+    "clarity_paginas.csv - Top paginas con friccion (Clarity)",
+    "clarity_historial.json - Historial diario Clarity",
+    "ga4_conversion_diario.csv - Conversion diaria GA4 (2025 vs 2026)",
+    "oms_pedidos_diario.csv - Pedidos OMS Ecommerce diario",
+    "funnel_mensual.csv - Funnel consolidado mes GA4 + OMS"
   ]
 }

@@ -1,15 +1,17 @@
 {
-  "ultima_actualizacion": "2026-08-11",
-  "fuente": "Microsoft Clarity Export API",
-  "proyecto": "o8vc0cwjrq",
+  "last_updated": "2026-08-11",
+  "period_main": "2026-08-01 a 2026-08-10",
+  "period_comparison": "2025-08-01 a 2025-08-10",
+  "fuente_ga4": "GA4 Property 352982057",
+  "fuente_oms": "OMS Reporteria canal Ecommerce",
+  "fuente_clarity": "Microsoft Clarity Project o8vc0cwjrq",
   "sitio": "cannonhome.cl",
-  "ventana_datos": "ultimos 3 dias",
-  "archivos": [
-    "clarity_funnel.csv - Friccion por etapa del funnel (Clarity)",
-    "clarity_paginas.csv - Top paginas con friccion (Clarity)",
-    "clarity_historial.json - Historial diario Clarity",
-    "ga4_conversion_diario.csv - Conversion diaria GA4 (2025 vs 2026)",
-    "oms_pedidos_diario.csv - Pedidos OMS Ecommerce diario",
-    "funnel_mensual.csv - Funnel consolidado mes GA4 + OMS"
-  ]
+  "archivos": {
+    "ventas_resumen.csv": "Venta diaria cruzada GA4 + OMS (sesiones, funnel, pedidos, estado, despacho)",
+    "ga4_funnel.csv": "Funnel consolidado agosto 2025 vs 2026",
+    "ventas_abandono_carrito.csv": "Abandono por etapa del funnel diario (drop y % entre cada paso)",
+    "clarity_funnel.csv": "Friccion UX por etapa (rage clicks, dead clicks, quickback, scroll depth)",
+    "clarity_paginas.csv": "Top paginas con mayor friccion y score",
+    "clarity_historial.json": "Historial diario acumulado de metricas Clarity"
+  }
 }

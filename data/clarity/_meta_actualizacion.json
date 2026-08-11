@@ -1,0 +1,12 @@
+{
+  "ultima_actualizacion": "2026-08-11",
+  "fuente": "Microsoft Clarity Export API",
+  "proyecto": "o8vc0cwjrq",
+  "sitio": "cannonhome.cl",
+  "ventana_datos": "ultimos 3 dias",
+  "archivos": [
+    "clarity_funnel.csv - Metricas de friccion por etapa del funnel",
+    "clarity_paginas.csv - Top paginas con mayor friccion",
+    "clarity_historial.json - Historial diario acumulado"
+  ]
+}

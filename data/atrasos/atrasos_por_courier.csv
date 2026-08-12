@@ -1,5 +1,5 @@
-﻿transportista,pedidos
-Transporte propio,455
-BigTicket,134
-Sin transportista,54
-FedEx,53
+﻿transportista,pedidos,dias_prom,dias_max
+Transporte propio,458,20.8,156.0
+BigTicket,112,32.7,117.0
+Fedex2,53,16.0,72.0
+-,50,6.3,43.0

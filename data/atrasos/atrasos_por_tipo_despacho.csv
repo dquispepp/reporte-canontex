@@ -1,5 +1,5 @@
-﻿tipo_despacho,pedidos
-Cross Docking,271
-Despacho a Domicilio,215
-Retiro en Tienda,199
-Fecha Pactada,11
+﻿tipo_despacho,pedidos,dias_prom
+Cross Docking,270,10.8
+Retiro en Tienda,200,33.5
+Despacho a Domicilio,194,24.2
+Fecha Pactada,9,4.8

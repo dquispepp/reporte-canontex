@@ -7,5 +7,19 @@
     "pct_otif": 71.0,
     "dias_atraso_prom": 20.2,
     "sin_wms": 0
+  },
+  {
+    "fecha": "2026-08-12",
+    "total_abiertos": 62238,
+    "atrasados": 673,
+    "pct_atrasados": 1.1,
+    "pct_otif": 98.9,
+    "dias_atraso_prom": 21.3,
+    "sin_wms": 9,
+    "reserva_sin_ov": 9,
+    "venta_futura": 9,
+    "sla_ecommerce": 84.7,
+    "sla_operacion": 75.0,
+    "sla_courier": 87.9
   }
 ]

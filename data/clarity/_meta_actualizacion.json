@@ -1,17 +1,17 @@
 {
-  "last_updated": "2026-08-11",
-  "period_main": "2026-08-01 a 2026-08-10",
-  "period_comparison": "2025-08-01 a 2025-08-10",
+  "last_updated": "2026-08-12",
+  "period_main": "2026-08-01 a 2026-08-11",
+  "period_comparison": "2025-08-01 a 2025-08-11",
   "fuente_ga4": "GA4 Property 352982057",
   "fuente_oms": "OMS Reporteria canal Ecommerce",
   "fuente_clarity": "Microsoft Clarity Project o8vc0cwjrq",
   "sitio": "cannonhome.cl",
   "archivos": {
-    "ventas_resumen.csv": "Venta diaria cruzada GA4 + OMS (sesiones, funnel, pedidos, estado, despacho)",
-    "ga4_funnel.csv": "Funnel consolidado agosto 2025 vs 2026",
-    "ventas_abandono_carrito.csv": "Abandono por etapa del funnel diario (drop y % entre cada paso)",
-    "clarity_funnel.csv": "Friccion UX por etapa (rage clicks, dead clicks, quickback, scroll depth)",
-    "clarity_paginas.csv": "Top paginas con mayor friccion y score",
-    "clarity_historial.json": "Historial diario acumulado de metricas Clarity"
+    "ventas_resumen.csv": "Venta diaria cruzada GA4 + OMS",
+    "ga4_funnel.csv": "Funnel consolidado mes actual vs anterior",
+    "ventas_abandono_carrito.csv": "Abandono por etapa del funnel diario",
+    "clarity_funnel.csv": "Friccion UX por etapa",
+    "clarity_paginas.csv": "Top paginas con mayor friccion",
+    "clarity_historial.json": "Historial diario acumulado Clarity"
   }
 }

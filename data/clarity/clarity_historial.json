@@ -204,5 +204,211 @@
       }
     ],
     "total_sessions": 1840
+  },
+  {
+    "fecha": "2026-08-12",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 3.32,
+        "quickback_pct": 20.81,
+        "scroll_depth": 26.8,
+        "active_time_s": 15.2,
+        "sessions": 841
+      },
+      "Categoria": {
+        "rage_pct": 0.0,
+        "dead_pct": 8.43,
+        "quickback_pct": 30.43,
+        "scroll_depth": 43.7,
+        "active_time_s": 30.1,
+        "sessions": 1068
+      },
+      "Producto": {
+        "rage_pct": 0.12,
+        "dead_pct": 6.74,
+        "quickback_pct": 8.13,
+        "scroll_depth": 44.7,
+        "active_time_s": 28.0,
+        "sessions": 861
+      },
+      "Carrito": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 66.0,
+        "active_time_s": 27.0,
+        "sessions": 2
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 821,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 15,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama",
+        "stage": "Categoria",
+        "sessions": 13,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 67.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 58,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 100.0,
+        "scroll": 49.67,
+        "friction_score": 300.3
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 15,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 300.0
+      },
+      {
+        "url": "/manta-gauze-lines-rose-127x152-cm.html",
+        "stage": "Producto",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 28.57,
+        "scroll": 34.78,
+        "friction_score": 272.4
+      },
+      {
+        "url": "/descuento-now",
+        "stage": "Categoria",
+        "sessions": 34,
+        "rage": 0,
+        "dead": 14.71,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 229.4
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 21,
+        "rage": 0,
+        "dead": 14.29,
+        "quickback": 100.0,
+        "scroll": 65.0,
+        "friction_score": 228.6
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones/2_plazas-plumones_microfibra",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 33.33,
+        "quickback": 80.0,
+        "scroll": 71.83,
+        "friction_score": 226.7
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 9,
+        "rage": 0,
+        "dead": 11.11,
+        "quickback": 100.0,
+        "scroll": 71.59,
+        "friction_score": 222.2
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 64.75,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/king",
+        "stage": "Categoria",
+        "sessions": 26,
+        "rage": 0,
+        "dead": 34.62,
+        "quickback": 42.31,
+        "scroll": 47.0,
+        "friction_score": 156.9
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones/king-plumones_microfibra",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 71.43,
+        "scroll": 68.9,
+        "friction_score": 142.9
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 31,
+        "rage": 0,
+        "dead": 12.5,
+        "quickback": 50.0,
+        "scroll": 100.0,
+        "friction_score": 125.0
+      },
+      {
+        "url": "/colchon-2-plazas-hybrid-visco-200cm.html",
+        "stage": "Producto",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 25.0,
+        "quickback": 37.5,
+        "scroll": 51.0,
+        "friction_score": 125.0
+      }
+    ],
+    "total_sessions": 1807
   }
 ]

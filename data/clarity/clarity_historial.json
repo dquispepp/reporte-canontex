@@ -616,5 +616,211 @@
       }
     ],
     "total_sessions": 1687
+  },
+  {
+    "fecha": "2026-08-14",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 2.11,
+        "quickback_pct": 19.65,
+        "scroll_depth": 21.5,
+        "active_time_s": 26.9,
+        "sessions": 804
+      },
+      "Categoria": {
+        "rage_pct": 0.0,
+        "dead_pct": 6.52,
+        "quickback_pct": 29.98,
+        "scroll_depth": 45.3,
+        "active_time_s": 34.9,
+        "sessions": 1074
+      },
+      "Producto": {
+        "rage_pct": 0.12,
+        "dead_pct": 4.4,
+        "quickback_pct": 9.62,
+        "scroll_depth": 45.9,
+        "active_time_s": 28.6,
+        "sessions": 863
+      },
+      "Carrito": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 80.0,
+        "active_time_s": 52.0,
+        "sessions": 1
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 780,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 80.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 14,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 31,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 58.33,
+        "scroll": 100.0,
+        "friction_score": 316.7
+      },
+      {
+        "url": "/12-ropa-de-cama",
+        "stage": "Categoria",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 100.0,
+        "scroll": 67.75,
+        "friction_score": 300.0
+      },
+      {
+        "url": "/dormitorio/camas-europeas/camas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 16.67,
+        "quickback": 100.0,
+        "scroll": 35.67,
+        "friction_score": 247.7
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas",
+        "stage": "Categoria",
+        "sessions": 16,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 22.22,
+        "scroll": 77.67,
+        "friction_score": 244.4
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 66,
+        "rage": 0,
+        "dead": 7.58,
+        "quickback": 100.0,
+        "scroll": 66.0,
+        "friction_score": 215.2
+      },
+      {
+        "url": "/descuento-now",
+        "stage": "Categoria",
+        "sessions": 26,
+        "rage": 0,
+        "dead": 3.85,
+        "quickback": 100.0,
+        "scroll": 49.0,
+        "friction_score": 208.7
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 30,
+        "rage": 0,
+        "dead": 3.85,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 207.7
+      },
+      {
+        "url": "/bano",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 62.6,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/1_5_plazas-sabanas",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 66.67,
+        "scroll": 62.77,
+        "friction_score": 133.3
+      },
+      {
+        "url": "/almohada-viscoelastica-zen.html",
+        "stage": "Producto",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 33.33,
+        "quickback": 33.33,
+        "scroll": 56.91,
+        "friction_score": 133.3
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/king",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 10.53,
+        "quickback": 42.11,
+        "scroll": 61.0,
+        "friction_score": 105.3
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 50.0,
+        "scroll": 51.86,
+        "friction_score": 100.0
+      }
+    ],
+    "total_sessions": 1215
   }
 ]

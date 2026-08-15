@@ -822,5 +822,211 @@
       }
     ],
     "total_sessions": 1215
+  },
+  {
+    "fecha": "2026-08-15",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 3.77,
+        "quickback_pct": 20.67,
+        "scroll_depth": 22.5,
+        "active_time_s": 22.2,
+        "sessions": 716
+      },
+      "Categoria": {
+        "rage_pct": 0.0,
+        "dead_pct": 5.8,
+        "quickback_pct": 30.66,
+        "scroll_depth": 46.8,
+        "active_time_s": 34.2,
+        "sessions": 1034
+      },
+      "Producto": {
+        "rage_pct": 0.21,
+        "dead_pct": 5.71,
+        "quickback_pct": 8.77,
+        "scroll_depth": 45.3,
+        "active_time_s": 25.0,
+        "sessions": 946
+      },
+      "Carrito": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 33.33,
+        "scroll_depth": 71.0,
+        "active_time_s": 14.0,
+        "sessions": 3
+      },
+      "Confirmacion": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 46.0,
+        "active_time_s": 18.5,
+        "sessions": 2
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 699,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 74.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 25,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/decoracion/alfombras/alfombras-grandes",
+        "stage": "Categoria",
+        "sessions": 43,
+        "rage": 0,
+        "dead": 9.3,
+        "quickback": 100.0,
+        "scroll": 70.67,
+        "friction_score": 218.6
+      },
+      {
+        "url": "/12-ropa-de-cama/almohadas",
+        "stage": "Categoria",
+        "sessions": 29,
+        "rage": 0,
+        "dead": 6.9,
+        "quickback": 100.0,
+        "scroll": 77.41,
+        "friction_score": 213.8
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 34,
+        "rage": 0,
+        "dead": 5.88,
+        "quickback": 100.0,
+        "scroll": 66.54,
+        "friction_score": 211.8
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas",
+        "stage": "Categoria",
+        "sessions": 11,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 67.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 10,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 86.25,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/evento/liquidacion/2_plazas",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 50.0,
+        "scroll": 75.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 9,
+        "rage": 0,
+        "dead": 33.33,
+        "quickback": 55.56,
+        "scroll": 60.71,
+        "friction_score": 177.8
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 18,
+        "rage": 0,
+        "dead": 21.43,
+        "quickback": 57.14,
+        "scroll": 64.0,
+        "friction_score": 157.1
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/king",
+        "stage": "Categoria",
+        "sessions": 29,
+        "rage": 0,
+        "dead": 17.24,
+        "quickback": 55.17,
+        "scroll": 59.0,
+        "friction_score": 144.8
+      },
+      {
+        "url": "/colchon-2-plazas-hybrid-visco-200cm.html",
+        "stage": "Producto",
+        "sessions": 11,
+        "rage": 0,
+        "dead": 9.09,
+        "quickback": 50.0,
+        "scroll": 100.0,
+        "friction_score": 118.2
+      },
+      {
+        "url": "/plumon-1-5-plazas-doucell.html",
+        "stage": "Producto",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 50.0,
+        "scroll": 52.25,
+        "friction_score": 100.0
+      },
+      {
+        "url": "/frazada-2-plazas-escocesa-verde.html",
+        "stage": "Producto",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 50.0,
+        "scroll": 60.86,
+        "friction_score": 100.0
+      }
+    ],
+    "total_sessions": 2266
   }
 ]

@@ -1,48 +1,47 @@
 # Resumen pedidos atrasados Canontex — 2026-08-16
 
 ## KPIs
-- Pedidos abiertos: 63,073
-- Atrasados: 762 (1.2%)
+- Pedidos abiertos: 63,099
+- Atrasados: 764 (1.2%)
 - OTIF: 98.8%
-- Dias atraso promedio: 20.2
-- Sin ingreso WMS: 544
-- Venta futura: 544
-- Reservas sin OV: 8
-- SLA Ecommerce: 84.6%
-- SLA Operacion: 74.8%
+- Dias atraso promedio: 20.1
+- Sin ingreso WMS: 29
+- Venta futura: 29
+- Reservas sin OV: 11
+- SLA Ecommerce: 84.4%
+- SLA Operacion: 74.7%
 - SLA Courier: 88.0%
 
 ## Atrasados por diagnostico
-- En tienda, esperando retiro cliente: 480
-- Courier tiene pedido, estado no actualizado en OMS: 88
+- En tienda, esperando retiro cliente: 479
+- Courier tiene pedido, estado no actualizado en OMS: 89
 - SAC devolución de dinero: 39
 - Recontactar cliente: 39
-- En ruta (atraso courier): 28
-- validar con SAC: 21
+- En ruta (atraso courier): 29
+- validar con SAC: 22
 - Quiebre SAP: 16
-- Aún no sale, empujar operación: 15
+- Aún no sale, empujar operación: 16
 - FedEx no recolectó, revisar en bodega: 10
-- Revisar WMS: no despachado: 8
 - Courier no encontró destino: 7
+- Revisar WMS: no despachado: 7
 - Quiebre SAP/WMS: 5
-- Investigar por qué no llegó al WMS: 3
+- Investigar por qué no llegó al WMS: 4
 - Quiebre WMS: 2
-- REVISAR MANUAL: 1
 
 ## Atrasados por tipo despacho
 - Cross Docking: 361
-- Retiro en Tienda: 205
-- Despacho a Domicilio: 192
+- Retiro en Tienda: 206
+- Despacho a Domicilio: 193
 - Fecha Pactada: 4
 
 ## Atrasados por transportista
-- Transporte propio: 554
+- Transporte propio: 553
 - BigTicket: 100
 - Fedex2: 65
-- -: 43
+- -: 46
 
 ## Atrasados por region
-- Metropolitana: 345
+- Metropolitana: 348
 - Libertador General Bernardo OHiggins: 106
 - Los Lagos: 58
 - Antofagasta: 46
@@ -51,7 +50,7 @@
 - Bio Bio: 25
 - Ñuble: 25
 - Valparaíso: 24
-- Coquimbo: 22
+- Coquimbo: 21
 
 ## Top 20 pedidos mas atrasados
 | envio_norm | orden_compra_norm | canal | estado | tipo_despacho | transportista | dias_atraso | diagnostico | region |
@@ -84,7 +83,7 @@
 - Antofagasta: 41
 - Ñuble: 23
 - Bio Bio: 21
-- Coquimbo: 20
+- Coquimbo: 19
 - Valparaiso: 19
 - Bío Bío: 17
 - Araucania: 9

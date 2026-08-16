@@ -1,16 +1,15 @@
 ﻿diagnostico,pedidos,dias_prom,dias_max
-"En tienda, esperando retiro cliente",480,15.0,155.0
-"Courier tiene pedido, estado no actualizado en OMS",88,41.8,120.0
-SAC devolución de dinero,39,59.8,159.0
+"En tienda, esperando retiro cliente",479,14.9,155.0
+"Courier tiene pedido, estado no actualizado en OMS",89,41.3,120.0
 Recontactar cliente,39,23.6,90.0
-En ruta (atraso courier),28,10.4,75.0
-validar con SAC,21,6.0,15.0
+SAC devolución de dinero,39,59.8,159.0
+En ruta (atraso courier),29,10.2,75.0
+validar con SAC,22,5.9,15.0
+"Aún no sale, empujar operación",16,3.6,7.0
 Quiebre SAP,16,3.0,16.0
-"Aún no sale, empujar operación",15,3.9,7.0
 "FedEx no recolectó, revisar en bodega",10,30.5,50.0
-Revisar WMS: no despachado,8,8.5,21.0
 Courier no encontró destino,7,29.3,47.0
+Revisar WMS: no despachado,7,9.1,21.0
 Quiebre SAP/WMS,5,16.2,46.0
-Investigar por qué no llegó al WMS,3,8.3,16.0
+Investigar por qué no llegó al WMS,4,7.2,16.0
 Quiebre WMS,2,27.5,48.0
-REVISAR MANUAL,1,5.0,5.0

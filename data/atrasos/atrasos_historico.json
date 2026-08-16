@@ -52,16 +52,16 @@
   },
   {
     "fecha": "2026-08-16",
-    "total_abiertos": 63073,
-    "atrasados": 762,
+    "total_abiertos": 63099,
+    "atrasados": 764,
     "pct_atrasados": 1.2,
     "pct_otif": 98.8,
-    "dias_atraso_prom": 20.2,
-    "sin_wms": 544,
-    "reserva_sin_ov": 8,
-    "venta_futura": 544,
-    "sla_ecommerce": 84.6,
-    "sla_operacion": 74.8,
+    "dias_atraso_prom": 20.1,
+    "sin_wms": 29,
+    "reserva_sin_ov": 11,
+    "venta_futura": 29,
+    "sla_ecommerce": 84.4,
+    "sla_operacion": 74.7,
     "sla_courier": 88.0
   }
 ]

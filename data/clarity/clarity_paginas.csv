@@ -1,11 +1,11 @@
 ﻿Pagina,Etapa,Sesiones,Rage%,Dead%,Quickback%,Scroll%,Score Friccion
-/dormitorio,Categoria,730,0.41,100.0,100.0,82.0,401.2
+/dormitorio,Categoria,733,0.41,100.0,100.0,80.0,401.2
+/evento/liquidacion,Categoria,1399,0.07,100.0,100.0,100.0,400.2
 /evento/liquidacion/ropa-de-cama/sabanas,Categoria,5,0.0,100.0,100.0,100.0,400.0
-/evento/liquidacion/ropa-de-cama/plumones,Categoria,185,0.0,100.0,100.0,100.0,400.0
-/evento/liquidacion,Categoria,39,0.0,100.0,100.0,100.0,400.0
-/,Home,20,0.0,100.0,100.0,81.0,400.0
-/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas,Categoria,39,0.0,33.33,100.0,54.0,266.7
-/evento/liquidacion/ropa-de-cama/frazadas,Categoria,9,0.0,11.11,100.0,9.0,263.2
-/sabana-bajera-2-plazas-300-hilos-liso-rosado.html,Producto,6,0.0,0.0,100.0,0.0,250.0
-/cama-1-5-plazas-new-still-200-cm.html,Producto,26,0.0,100.0,0.0,35.0,215.0
-/12-ropa-de-cama/cubrecamas/2_plazas,Categoria,18,0.0,5.56,72.22,0.0,205.6
+/12-ropa-de-cama/20-sabanas,Categoria,44,0.0,100.0,100.0,100.0,400.0
+/,Home,10,0.0,100.0,100.0,81.0,400.0
+/plumon-1-5-plazas-summer.html,Producto,16,6.25,100.0,0.0,84.0,218.8
+/bano/toallas,Categoria,59,0.0,0.0,100.0,40.77,209.2
+/12-ropa-de-cama/plumones,Categoria,5,0.0,100.0,0.0,68.0,200.0
+/evento/liquidacion/2_plazas,Categoria,47,0.0,33.33,66.67,71.83,200.0
+/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/1_5_plazas,Categoria,8,0.0,0.0,75.0,0.0,200.0

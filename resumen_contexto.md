@@ -1,10 +1,10 @@
 # Resumen pedidos atrasados Canontex — 2026-08-17
 
 ## KPIs
-- Pedidos abiertos: 63,185
-- Atrasados: 762 (1.2%)
+- Pedidos abiertos: 63,207
+- Atrasados: 746 (1.2%)
 - OTIF: 98.8%
-- Dias atraso promedio: 20.1
+- Dias atraso promedio: 20.3
 - Sin ingreso WMS: 24
 - Venta futura: 24
 - Reservas sin OV: 12
@@ -13,43 +13,44 @@
 - SLA Courier: 88.0%
 
 ## Atrasados por diagnostico
-- En tienda, esperando retiro cliente: 478
-- Courier tiene pedido, estado no actualizado en OMS: 89
+- En tienda, esperando retiro cliente: 470
+- Courier tiene pedido, estado no actualizado en OMS: 88
+- Recontactar cliente: 40
 - SAC devolución de dinero: 39
-- Recontactar cliente: 38
-- En ruta (atraso courier): 30
-- validar con SAC: 22
+- En ruta (atraso courier): 25
+- validar con SAC: 21
 - Quiebre SAP: 16
-- Aún no sale, empujar operación: 15
 - FedEx no recolectó, revisar en bodega: 10
+- Aún no sale, empujar operación: 9
+- Revisar WMS: no despachado: 8
 - Courier no encontró destino: 7
-- Revisar WMS: no despachado: 7
 - Quiebre SAP/WMS: 5
 - Investigar por qué no llegó al WMS: 4
 - Quiebre WMS: 2
+- Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho: 2
 
 ## Atrasados por tipo despacho
-- Cross Docking: 361
-- Retiro en Tienda: 204
-- Despacho a Domicilio: 193
+- Cross Docking: 353
+- Retiro en Tienda: 201
+- Despacho a Domicilio: 188
 - Fecha Pactada: 4
 
 ## Atrasados por transportista
-- Transporte propio: 552
-- BigTicket: 100
-- Fedex2: 65
-- -: 45
+- Transporte propio: 543
+- BigTicket: 101
+- Fedex2: 62
+- -: 40
 
 ## Atrasados por region
-- Metropolitana: 346
+- Metropolitana: 335
 - Libertador General Bernardo OHiggins: 106
 - Los Lagos: 58
 - Antofagasta: 46
-- Bío Bío: 33
+- Bío Bío: 32
 - Valparaiso: 28
 - Bio Bio: 25
 - Ñuble: 25
-- Valparaíso: 24
+- Valparaíso: 23
 - Coquimbo: 21
 
 ## Top 20 pedidos mas atrasados
@@ -77,7 +78,7 @@
 | 001015637 | 1683224 | ECOMMERCE | Preparado | Despacho a Domicilio | BigTicket | 117.0 | Courier tiene pedido, estado no actualizado en OMS | Metropolitana |
 
 ## Retiro en tienda por tienda (top 15)
-- Metropolitana: 174
+- Metropolitana: 167
 - Libertador General Bernardo OHiggins: 99
 - Los Lagos: 44
 - Antofagasta: 41
@@ -85,7 +86,7 @@
 - Bio Bio: 21
 - Coquimbo: 19
 - Valparaiso: 19
-- Bío Bío: 17
+- Bío Bío: 16
 - Araucania: 9
 - Valparaíso: 9
 - Los Rios: 2

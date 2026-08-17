@@ -1028,5 +1028,211 @@
       }
     ],
     "total_sessions": 2266
+  },
+  {
+    "fecha": "2026-08-17",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.24,
+        "dead_pct": 3.29,
+        "quickback_pct": 24.09,
+        "scroll_depth": 19.3,
+        "active_time_s": 17.7,
+        "sessions": 822
+      },
+      "Categoria": {
+        "rage_pct": 0.0,
+        "dead_pct": 6.16,
+        "quickback_pct": 29.81,
+        "scroll_depth": 43.7,
+        "active_time_s": 32.9,
+        "sessions": 1429
+      },
+      "Producto": {
+        "rage_pct": 0.11,
+        "dead_pct": 5.33,
+        "quickback_pct": 9.67,
+        "scroll_depth": 44.5,
+        "active_time_s": 27.3,
+        "sessions": 920
+      },
+      "Carrito": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 57.5,
+        "active_time_s": 4.0,
+        "sessions": 2
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 14.29,
+        "quickback_pct": 28.57,
+        "scroll_depth": 79.9,
+        "active_time_s": 94.5,
+        "sessions": 7
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 799,
+        "rage": 0.25,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 70.67,
+        "friction_score": 400.8
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 13,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/dormitorio",
+        "stage": "Categoria",
+        "sessions": 17,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 81.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 29,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon",
+        "stage": "Categoria",
+        "sessions": 26,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 26.92,
+        "scroll": 63.0,
+        "friction_score": 253.8
+      },
+      {
+        "url": "/dormitorio/respaldos",
+        "stage": "Categoria",
+        "sessions": 23,
+        "rage": 0,
+        "dead": 8.7,
+        "quickback": 100.0,
+        "scroll": 76.0,
+        "friction_score": 217.4
+      },
+      {
+        "url": "/decoracion/alfombras/alfombras-grandes",
+        "stage": "Categoria",
+        "sessions": 48,
+        "rage": 0,
+        "dead": 4.17,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 208.3
+      },
+      {
+        "url": "/12-ropa-de-cama",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 75.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 23,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 66.15,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/sabanas-2-plazas-200-hilos-check.html",
+        "stage": "Producto",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 62.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/plaza/king",
+        "stage": "Categoria",
+        "sessions": 26,
+        "rage": 0,
+        "dead": 3.85,
+        "quickback": 66.67,
+        "scroll": 60.83,
+        "friction_score": 141.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 46,
+        "rage": 0,
+        "dead": 11.76,
+        "quickback": 57.14,
+        "scroll": 68.0,
+        "friction_score": 137.8
+      },
+      {
+        "url": "/bano/toallas/sabanas-de-bano",
+        "stage": "Categoria",
+        "sessions": 37,
+        "rage": 0,
+        "dead": 18.92,
+        "quickback": 35.14,
+        "scroll": 30.28,
+        "friction_score": 127.8
+      },
+      {
+        "url": "/bano/toallas",
+        "stage": "Categoria",
+        "sessions": 92,
+        "rage": 0,
+        "dead": 33.33,
+        "quickback": 22.83,
+        "scroll": 41.57,
+        "friction_score": 120.8
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 20.0,
+        "quickback": 40.0,
+        "scroll": 63.0,
+        "friction_score": 120.0
+      }
+    ],
+    "total_sessions": 2169
   }
 ]

@@ -1,26 +1,26 @@
-# Resumen pedidos atrasados Canontex — 2026-08-16
+# Resumen pedidos atrasados Canontex — 2026-08-17
 
 ## KPIs
-- Pedidos abiertos: 63,099
-- Atrasados: 764 (1.2%)
+- Pedidos abiertos: 63,185
+- Atrasados: 762 (1.2%)
 - OTIF: 98.8%
 - Dias atraso promedio: 20.1
-- Sin ingreso WMS: 29
-- Venta futura: 29
-- Reservas sin OV: 11
-- SLA Ecommerce: 84.4%
+- Sin ingreso WMS: 24
+- Venta futura: 24
+- Reservas sin OV: 12
+- SLA Ecommerce: 84.3%
 - SLA Operacion: 74.7%
 - SLA Courier: 88.0%
 
 ## Atrasados por diagnostico
-- En tienda, esperando retiro cliente: 479
+- En tienda, esperando retiro cliente: 478
 - Courier tiene pedido, estado no actualizado en OMS: 89
 - SAC devolución de dinero: 39
-- Recontactar cliente: 39
-- En ruta (atraso courier): 29
+- Recontactar cliente: 38
+- En ruta (atraso courier): 30
 - validar con SAC: 22
 - Quiebre SAP: 16
-- Aún no sale, empujar operación: 16
+- Aún no sale, empujar operación: 15
 - FedEx no recolectó, revisar en bodega: 10
 - Courier no encontró destino: 7
 - Revisar WMS: no despachado: 7
@@ -30,18 +30,18 @@
 
 ## Atrasados por tipo despacho
 - Cross Docking: 361
-- Retiro en Tienda: 206
+- Retiro en Tienda: 204
 - Despacho a Domicilio: 193
 - Fecha Pactada: 4
 
 ## Atrasados por transportista
-- Transporte propio: 553
+- Transporte propio: 552
 - BigTicket: 100
 - Fedex2: 65
-- -: 46
+- -: 45
 
 ## Atrasados por region
-- Metropolitana: 348
+- Metropolitana: 346
 - Libertador General Bernardo OHiggins: 106
 - Los Lagos: 58
 - Antofagasta: 46
@@ -77,7 +77,7 @@
 | 001015637 | 1683224 | ECOMMERCE | Preparado | Despacho a Domicilio | BigTicket | 117.0 | Courier tiene pedido, estado no actualizado en OMS | Metropolitana |
 
 ## Retiro en tienda por tienda (top 15)
-- Metropolitana: 175
+- Metropolitana: 174
 - Libertador General Bernardo OHiggins: 99
 - Los Lagos: 44
 - Antofagasta: 41
@@ -91,4 +91,4 @@
 - Los Rios: 2
 - Araucanía: 1
 
-*Generado automaticamente el 2026-08-16 por el pipeline de atrasos.*
+*Generado automaticamente el 2026-08-17 por el pipeline de atrasos.*

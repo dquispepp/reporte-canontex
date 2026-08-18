@@ -5,3 +5,4 @@ jinja2>=3.1.0
 python-dateutil>=2.8.0
 holidays>=0.50
 python-dotenv>=1.0.0
+mcp[cli]==1.29.0

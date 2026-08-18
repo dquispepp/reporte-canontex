@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: canontex-cro-mcp
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python src/mcp_cro_server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10

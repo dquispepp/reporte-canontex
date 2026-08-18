@@ -1234,5 +1234,211 @@
       }
     ],
     "total_sessions": 2169
+  },
+  {
+    "fecha": "2026-08-18",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.84,
+        "quickback_pct": 16.58,
+        "scroll_depth": 23.5,
+        "active_time_s": 18.6,
+        "sessions": 832
+      },
+      "Categoria": {
+        "rage_pct": 0.0,
+        "dead_pct": 9.39,
+        "quickback_pct": 28.5,
+        "scroll_depth": 47.3,
+        "active_time_s": 32.6,
+        "sessions": 1172
+      },
+      "Producto": {
+        "rage_pct": 0.0,
+        "dead_pct": 4.62,
+        "quickback_pct": 7.51,
+        "scroll_depth": 44.8,
+        "active_time_s": 26.7,
+        "sessions": 865
+      },
+      "Carrito": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 63.0,
+        "active_time_s": 6.0,
+        "sessions": 1
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 60.3,
+        "active_time_s": 119.0,
+        "sessions": 6
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/dormitorio",
+        "stage": "Categoria",
+        "sessions": 12,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 64.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 10,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 66.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 53.74,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 20,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 300.0
+      },
+      {
+        "url": "/sabanas-2-plazas-200-hilos-kiki.html",
+        "stage": "Producto",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 20.0,
+        "scroll": 44.62,
+        "friction_score": 245.4
+      },
+      {
+        "url": "/bano",
+        "stage": "Categoria",
+        "sessions": 9,
+        "rage": 0,
+        "dead": 11.11,
+        "quickback": 100.0,
+        "scroll": 67.0,
+        "friction_score": 222.2
+      },
+      {
+        "url": "/descuento-now",
+        "stage": "Categoria",
+        "sessions": 41,
+        "rage": 0,
+        "dead": 4.88,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 209.8
+      },
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 803,
+        "rage": 0,
+        "dead": 0.87,
+        "quickback": 100.0,
+        "scroll": 73.0,
+        "friction_score": 201.7
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/2-plazas",
+        "stage": "Categoria",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 84.89,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/hoteleria/almohadas/almohadas-viscoelasticas",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 40.0,
+        "quickback": 60.0,
+        "scroll": 51.57,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/plumones-de-microfibra/king",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 28.57,
+        "quickback": 42.86,
+        "scroll": 68.36,
+        "friction_score": 142.9
+      },
+      {
+        "url": "/colchon-king-hybrid-wool-200cm.html",
+        "stage": "Producto",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 16.67,
+        "scroll": 62.55,
+        "friction_score": 133.3
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-300-hilos",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 40.0,
+        "scroll": 21.33,
+        "friction_score": 108.7
+      }
+    ],
+    "total_sessions": 1986
   }
 ]

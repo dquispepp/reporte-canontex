@@ -1,11 +1,11 @@
 ﻿Pagina,Etapa,Sesiones,Rage%,Dead%,Quickback%,Scroll%,Score Friccion
-/dormitorio,Categoria,733,0.41,100.0,100.0,80.0,401.2
-/evento/liquidacion,Categoria,1399,0.07,100.0,100.0,100.0,400.2
-/evento/liquidacion/ropa-de-cama/sabanas,Categoria,5,0.0,100.0,100.0,100.0,400.0
-/12-ropa-de-cama/20-sabanas,Categoria,44,0.0,100.0,100.0,100.0,400.0
-/,Home,10,0.0,100.0,100.0,81.0,400.0
-/plumon-1-5-plazas-summer.html,Producto,16,6.25,100.0,0.0,84.0,218.8
-/bano/toallas,Categoria,59,0.0,0.0,100.0,40.77,209.2
-/12-ropa-de-cama/plumones,Categoria,5,0.0,100.0,0.0,68.0,200.0
-/evento/liquidacion/2_plazas,Categoria,47,0.0,33.33,66.67,71.83,200.0
-/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/1_5_plazas,Categoria,8,0.0,0.0,75.0,0.0,200.0
+/dormitorio,Categoria,744,0.27,100.0,100.0,80.0,400.8
+/evento/liquidacion,Categoria,12,0.0,100.0,100.0,100.0,400.0
+/12-ropa-de-cama/plumones/plumones-de-microfibra/plumones-king,Categoria,25,0.0,0.0,100.0,38.5,211.5
+/12-ropa-de-cama/cubrecamas/2_plazas,Categoria,16,0.0,0.0,62.5,0.0,175.0
+/12-ropa-de-cama/king,Categoria,62,0.0,14.29,42.86,0.0,164.3
+/12-ropa-de-cama/20-sabanas/sabanas-300-hilos/1_5_plazas,Categoria,14,0.0,14.29,35.71,0.0,150.0
+/12-ropa-de-cama/fundas-plumon,Categoria,18,0.0,22.22,42.86,48.0,132.2
+/customer/account/logoutSuccess,Categoria,8,0.0,0.0,37.5,0.0,125.0
+/set-2-toallas-piedra.html,Producto,6,0.0,0.0,33.33,0.0,116.7
+/sabanas-1-5-plazas-200-hilos-vintura.html,Producto,13,0.0,15.38,15.38,0.0,111.5

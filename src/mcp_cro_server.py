@@ -15,12 +15,24 @@ from pathlib import Path
 
 import pandas as pd
 from mcp.server.fastmcp import FastMCP
+from mcp.server.transport_security import TransportSecuritySettings
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CRO_DIR = BASE_DIR / "data" / "clarity"
 ATRASOS_DIR = BASE_DIR / "data" / "atrasos"
 
-mcp = FastMCP("canontex-data", stateless_http=True)
+# Permite el host publico de Render (por default el SDK MCP solo acepta
+# localhost, como proteccion anti DNS-rebinding).
+ALLOWED_HOST = os.environ.get("MCP_ALLOWED_HOST", "reporte-canontex.onrender.com")
+
+mcp = FastMCP(
+    "canontex-data",
+    stateless_http=True,
+    transport_security=TransportSecuritySettings(
+        allowed_hosts=["127.0.0.1:*", "localhost:*", ALLOWED_HOST],
+        allowed_origins=["http://127.0.0.1:*", "http://localhost:*", f"https://{ALLOWED_HOST}"],
+    ),
+)
 
 
 def _read_csv(name: str, data_dir: Path = CRO_DIR) -> pd.DataFrame:

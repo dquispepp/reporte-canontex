@@ -1,6 +1,7 @@
 """
-Servidor MCP que expone los datos de CRO/Clarity (data/clarity/) como
-herramientas consultables en vivo desde Claude.ai (Project CRO) o Claude Code.
+Servidor MCP que expone los datos de CRO/Clarity (data/clarity/) y de
+Atrasos (data/atrasos/) como herramientas consultables en vivo desde
+Claude.ai (Projects CRO y Atrasos) o Claude Code.
 
 Correr local (pruebas):
     python src/mcp_cro_server.py
@@ -16,15 +17,16 @@ import pandas as pd
 from mcp.server.fastmcp import FastMCP
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-DATA_DIR = BASE_DIR / "data" / "clarity"
+CRO_DIR = BASE_DIR / "data" / "clarity"
+ATRASOS_DIR = BASE_DIR / "data" / "atrasos"
 
-mcp = FastMCP("canontex-cro", stateless_http=True)
+mcp = FastMCP("canontex-data", stateless_http=True)
 
 
-def _read_csv(name: str) -> pd.DataFrame:
-    path = DATA_DIR / name
+def _read_csv(name: str, data_dir: Path = CRO_DIR) -> pd.DataFrame:
+    path = data_dir / name
     if not path.exists():
-        raise FileNotFoundError(f"No existe {name} en data/clarity/")
+        raise FileNotFoundError(f"No existe {name} en {data_dir}")
     return pd.read_csv(path, encoding="utf-8-sig")
 
 
@@ -35,11 +37,11 @@ def _df_to_records(df: pd.DataFrame, tail: int | None = None) -> list[dict]:
 
 
 @mcp.tool()
-def get_metadata() -> dict:
+def get_cro_metadata() -> dict:
     """Metadata de la última actualización de los datos CRO: fecha de corte,
     periodo cubierto, fuentes (GA4, OMS, Clarity) y descripción de cada archivo.
     Consulta esto primero para saber qué tan frescos están los datos."""
-    meta_path = DATA_DIR / "_meta_actualizacion.json"
+    meta_path = CRO_DIR / "_meta_actualizacion.json"
     return json.loads(meta_path.read_text(encoding="utf-8"))
 
 
@@ -127,7 +129,83 @@ def get_oms_pedidos_diario(dias: int = 14) -> list[dict]:
 def get_clarity_historial() -> dict:
     """Historial diario acumulado de Clarity (snapshots por fecha) para ver
     evolución de la fricción UX en el tiempo."""
-    path = DATA_DIR / "clarity_historial.json"
+    path = CRO_DIR / "clarity_historial.json"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+# ---------------------------------------------------------------------------
+# Atrasos (data/atrasos/)
+# ---------------------------------------------------------------------------
+
+
+@mcp.tool()
+def get_atrasos_metadata() -> dict:
+    """Metadata de la última actualización del reporte de atrasos: fecha de
+    corte, fuente (OMS + WMS + FedEx + BigTicket) y descripción de cada
+    archivo. Consulta esto primero para saber qué tan fresco es el dato."""
+    meta_path = ATRASOS_DIR / "_meta_actualizacion.json"
+    return json.loads(meta_path.read_text(encoding="utf-8"))
+
+
+@mcp.tool()
+def get_atrasos_tendencia(dias: int = 30) -> list[dict]:
+    """Serie histórica diaria de KPIs de atrasos: total de pedidos abiertos,
+    atrasados, % atrasados, % OTIF, días de atraso promedio, pedidos sin
+    WMS, reservas sin OV y venta futura.
+    Args:
+        dias: cuántos días recientes devolver (default 30).
+    """
+    df = _read_csv("atrasos_tendencia.csv", ATRASOS_DIR)
+    return _df_to_records(df, tail=dias)
+
+
+@mcp.tool()
+def get_atrasos_por_diagnostico() -> list[dict]:
+    """Desglose de pedidos atrasados por diagnóstico (ej. 'En tienda,
+    esperando retiro cliente', 'Quiebre SAP', etc.) con cantidad de
+    pedidos, días de atraso promedio y máximo."""
+    df = _read_csv("atrasos_por_diagnostico.csv", ATRASOS_DIR)
+    return _df_to_records(df)
+
+
+@mcp.tool()
+def get_atrasos_por_courier() -> list[dict]:
+    """Rendimiento de atrasos por transportista: cantidad de pedidos
+    atrasados, días de atraso promedio y máximo por courier."""
+    df = _read_csv("atrasos_por_courier.csv", ATRASOS_DIR)
+    return _df_to_records(df)
+
+
+@mcp.tool()
+def get_atrasos_por_tienda() -> list[dict]:
+    """Retiros pendientes/atrasados por tienda (región): cantidad de
+    pedidos, días de atraso promedio y máximo."""
+    df = _read_csv("atrasos_por_tienda.csv", ATRASOS_DIR)
+    return _df_to_records(df)
+
+
+@mcp.tool()
+def get_atrasos_por_tipo_despacho() -> list[dict]:
+    """Pedidos atrasados por tipo de despacho (ej. Cross Docking, Despacho
+    Directo, Retiro en Tienda) con cantidad y días promedio."""
+    df = _read_csv("atrasos_por_tipo_despacho.csv", ATRASOS_DIR)
+    return _df_to_records(df)
+
+
+@mcp.tool()
+def get_atrasos_top50() -> list[dict]:
+    """Detalle de los 50 pedidos más atrasados: envío, orden de compra,
+    canal, estado, tipo de despacho, transportista, días de atraso,
+    diagnóstico, región y fechas de transacción/compromiso."""
+    df = _read_csv("atrasos_detalle_top50.csv", ATRASOS_DIR)
+    return _df_to_records(df)
+
+
+@mcp.tool()
+def get_atrasos_historial() -> dict:
+    """Historial diario acumulado de KPIs de atrasos en formato JSON
+    (mismo dato que get_atrasos_tendencia pero como snapshot histórico)."""
+    path = ATRASOS_DIR / "atrasos_historico.json"
     return json.loads(path.read_text(encoding="utf-8"))
 
 

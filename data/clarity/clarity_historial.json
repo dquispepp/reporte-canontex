@@ -1440,5 +1440,211 @@
       }
     ],
     "total_sessions": 1986
+  },
+  {
+    "fecha": "2026-08-19",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 2.79,
+        "quickback_pct": 18.73,
+        "scroll_depth": 22.8,
+        "active_time_s": 22.3,
+        "sessions": 753
+      },
+      "Categoria": {
+        "rage_pct": 0.1,
+        "dead_pct": 7.81,
+        "quickback_pct": 29.24,
+        "scroll_depth": 44.9,
+        "active_time_s": 33.0,
+        "sessions": 1050
+      },
+      "Producto": {
+        "rage_pct": 0.0,
+        "dead_pct": 5.52,
+        "quickback_pct": 9.31,
+        "scroll_depth": 45.7,
+        "active_time_s": 30.2,
+        "sessions": 870
+      },
+      "Carrito": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 8.33,
+        "quickback_pct": 8.33,
+        "scroll_depth": 71.0,
+        "active_time_s": 187.7,
+        "sessions": 12
+      },
+      "Confirmacion": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 26.0,
+        "active_time_s": 0.0,
+        "sessions": 1
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 100.0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 700.0
+      },
+      {
+        "url": "/plumon-sherpa-2-plazas-termico-vinke.html",
+        "stage": "Producto",
+        "sessions": 15,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 39.0,
+        "friction_score": 411.0
+      },
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 728,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 11,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 33,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 67.44,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/colchon-2-plazas-hybrid-visco-200cm.html",
+        "stage": "Producto",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 59.58,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama",
+        "stage": "Categoria",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 12.5,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 225.0
+      },
+      {
+        "url": "/12-ropa-de-cama/almohadas",
+        "stage": "Categoria",
+        "sessions": 33,
+        "rage": 0,
+        "dead": 6.06,
+        "quickback": 100.0,
+        "scroll": 77.92,
+        "friction_score": 212.1
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/king_1",
+        "stage": "Categoria",
+        "sessions": 17,
+        "rage": 0,
+        "dead": 17.65,
+        "quickback": 42.86,
+        "scroll": 60.48,
+        "friction_score": 121.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 10,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 60.0,
+        "scroll": 100.0,
+        "friction_score": 120.0
+      },
+      {
+        "url": "/evento/liquidacion/almohadas",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 40.0,
+        "quickback": 20.0,
+        "scroll": 58.8,
+        "friction_score": 120.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/plumones-sherpa/plumones-sherpa-1-5-plazas",
+        "stage": "Categoria",
+        "sessions": 13,
+        "rage": 0,
+        "dead": 7.69,
+        "quickback": 46.15,
+        "scroll": 44.0,
+        "friction_score": 113.7
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 24,
+        "rage": 0,
+        "dead": 9.09,
+        "quickback": 45.83,
+        "scroll": 66.0,
+        "friction_score": 109.8
+      },
+      {
+        "url": "/12-ropa-de-cama/56-mantas-y-pieceras",
+        "stage": "Categoria",
+        "sessions": 33,
+        "rage": 0,
+        "dead": 9.09,
+        "quickback": 45.45,
+        "scroll": 79.95,
+        "friction_score": 109.1
+      }
+    ],
+    "total_sessions": 2219
   }
 ]

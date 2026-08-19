@@ -91,5 +91,19 @@
     "sla_ecommerce": 84.3,
     "sla_operacion": 74.7,
     "sla_courier": 88.0
+  },
+  {
+    "fecha": "2026-08-19",
+    "total_abiertos": 63569,
+    "atrasados": 737,
+    "pct_atrasados": 1.2,
+    "pct_otif": 98.8,
+    "dias_atraso_prom": 21.0,
+    "sin_wms": 34,
+    "reserva_sin_ov": 10,
+    "venta_futura": 34,
+    "sla_ecommerce": 84.3,
+    "sla_operacion": 74.7,
+    "sla_courier": 88.0
   }
 ]

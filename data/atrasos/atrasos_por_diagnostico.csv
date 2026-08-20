@@ -1,16 +1,16 @@
 ﻿diagnostico,pedidos,dias_prom,dias_max
-"En tienda, esperando retiro cliente",483,14.6,157.0
-"Courier tiene pedido, estado no actualizado en OMS",87,43.2,122.0
-SAC devolución de dinero,39,61.8,161.0
-Recontactar cliente,38,26.0,92.0
-En ruta (atraso courier),19,14.3,77.0
-validar con SAC,17,7.3,17.0
-Quiebre SAP,17,4.8,18.0
-"FedEx no recolectó, revisar en bodega",10,32.5,52.0
-Courier no encontró destino,7,31.3,49.0
-Revisar WMS: no despachado,6,11.2,23.0
-Quiebre SAP/WMS,5,18.2,48.0
-Investigar por qué no llegó al WMS,3,10.3,18.0
-"Aún no sale, empujar operación",3,7.3,17.0
-Quiebre WMS,2,29.5,50.0
-"Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho",1,5.0,5.0
+"En tienda, esperando retiro cliente",508,14.8,158.0
+"Courier tiene pedido, estado no actualizado en OMS",90,40.8,123.0
+SAC devolución de dinero,44,56.2,162.0
+En ruta (atraso courier),24,12.0,78.0
+"Aún no sale, empujar operación",24,1.9,12.0
+Recontactar cliente,24,21.2,62.0
+Quiebre SAP,16,5.8,15.0
+Revisar WMS: no despachado,16,6.6,24.0
+"FedEx no recolectó, revisar en bodega",8,37.5,53.0
+Quiebre SAP/WMS,5,19.2,49.0
+"Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho",4,9.2,11.0
+validar con SAC,4,4.8,8.0
+Courier no encontró destino,3,18.0,23.0
+Investigar por qué no llegó al WMS,3,11.3,19.0
+Quiebre WMS,2,30.5,51.0

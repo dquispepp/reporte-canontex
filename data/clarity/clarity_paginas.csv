@@ -1,11 +1,11 @@
 ﻿Pagina,Etapa,Sesiones,Rage%,Dead%,Quickback%,Scroll%,Score Friccion
-/evento/liquidacion,Categoria,22,0.0,100.0,100.0,100.0,400.0
-/evento/liquidacion/ropa-de-cama/plumones,Categoria,41,0.0,100.0,100.0,100.0,400.0
-/12-ropa-de-cama/20-sabanas,Categoria,22,0.0,100.0,100.0,100.0,400.0
-/evento/liquidacion/ropa-de-cama/sabanas/200_hilos,Categoria,9,0.0,100.0,100.0,75.0,400.0
-/12-ropa-de-cama/plumones,Categoria,65,0.0,100.0,50.0,64.0,300.0
-/12-ropa-de-cama,Categoria,7,0.0,20.0,100.0,75.0,240.0
-/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas,Categoria,222,0.0,13.51,100.0,47.07,230.0
-/dormitorio/respaldos,Categoria,40,0.0,0.0,100.0,44.63,205.4
-/,Home,2367,0.08,0.0,100.0,68.0,200.2
-/descuento-now,Categoria,11,0.0,0.0,100.0,55.91,200.0
+/dormitorio,Categoria,550,0.0,100.0,100.0,100.0,400.0
+/evento/liquidacion,Categoria,17,0.0,100.0,100.0,100.0,400.0
+/12-ropa-de-cama/20-sabanas,Categoria,10,0.0,100.0,60.0,100.0,320.0
+/12-ropa-de-cama/plumones,Categoria,244,0.41,33.33,100.0,64.0,267.9
+/12-ropa-de-cama/fundas-plumon,Categoria,10,0.0,10.0,100.0,12.0,258.0
+/evento/liquidacion/ropa-de-cama/sabanas/300_hilos,Categoria,7,0.0,0.0,100.0,9.0,241.0
+/12-ropa-de-cama,Categoria,86,0.0,20.0,100.0,100.0,240.0
+/evento/liquidacion/ropa-de-cama/frazadas,Categoria,6,0.0,0.0,100.0,27.0,223.0
+/plumon-2-plazas-avian.html,Producto,32,0.0,100.0,0.0,36.0,214.0
+/plumon-2-plazas-absolute.html,Producto,16,0.0,6.25,100.0,58.4,212.5

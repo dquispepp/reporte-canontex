@@ -1646,5 +1646,211 @@
       }
     ],
     "total_sessions": 2219
+  },
+  {
+    "fecha": "2026-08-20",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.67,
+        "quickback_pct": 16.27,
+        "scroll_depth": 26.4,
+        "active_time_s": 30.1,
+        "sessions": 750
+      },
+      "Categoria": {
+        "rage_pct": 0.1,
+        "dead_pct": 7.52,
+        "quickback_pct": 29.08,
+        "scroll_depth": 45.6,
+        "active_time_s": 35.9,
+        "sessions": 1011
+      },
+      "Producto": {
+        "rage_pct": 0.12,
+        "dead_pct": 4.6,
+        "quickback_pct": 9.32,
+        "scroll_depth": 44.1,
+        "active_time_s": 30.4,
+        "sessions": 848
+      },
+      "Carrito": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 64.6,
+        "active_time_s": 43.0,
+        "sessions": 5
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 20,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 84.67,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 57,
+        "rage": 0,
+        "dead": 14.04,
+        "quickback": 100.0,
+        "scroll": 65.0,
+        "friction_score": 228.1
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas",
+        "stage": "Categoria",
+        "sessions": 11,
+        "rage": 0,
+        "dead": 9.09,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 218.2
+      },
+      {
+        "url": "/12-ropa-de-cama/56-mantas-y-pieceras",
+        "stage": "Categoria",
+        "sessions": 45,
+        "rage": 0,
+        "dead": 6.67,
+        "quickback": 100.0,
+        "scroll": 79.17,
+        "friction_score": 213.3
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 5.26,
+        "quickback": 100.0,
+        "scroll": 64.83,
+        "friction_score": 210.5
+      },
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 730,
+        "rage": 0,
+        "dead": 0.68,
+        "quickback": 100.0,
+        "scroll": 80.0,
+        "friction_score": 201.4
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/1_plaza_1",
+        "stage": "Categoria",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 100.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/dormitorio/respaldos/king",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 33.33,
+        "quickback": 33.33,
+        "scroll": 48.0,
+        "friction_score": 135.3
+      },
+      {
+        "url": "/bata-de-bano-terry-navy-l-xl.html",
+        "stage": "Producto",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 20.0,
+        "quickback": 40.0,
+        "scroll": 59.67,
+        "friction_score": 120.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 32,
+        "rage": 0,
+        "dead": 11.76,
+        "quickback": 47.06,
+        "scroll": 69.26,
+        "friction_score": 117.6
+      },
+      {
+        "url": "/almohada-cannon-microfibra-50x70-cm.html",
+        "stage": "Producto",
+        "sessions": 9,
+        "rage": 0,
+        "dead": 22.22,
+        "quickback": 33.33,
+        "scroll": 44.11,
+        "friction_score": 117.0
+      },
+      {
+        "url": "/alfombra-lana-degrade-beige-160x235-cm.html",
+        "stage": "Producto",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 0,
+        "scroll": 34.25,
+        "friction_score": 115.8
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/king_1",
+        "stage": "Categoria",
+        "sessions": 14,
+        "rage": 0,
+        "dead": 7.14,
+        "quickback": 50.0,
+        "scroll": 53.62,
+        "friction_score": 114.3
+      },
+      {
+        "url": "/decoracion/alfombras/alfombras-grandes",
+        "stage": "Categoria",
+        "sessions": 24,
+        "rage": 0,
+        "dead": 12.5,
+        "quickback": 37.5,
+        "scroll": 60.0,
+        "friction_score": 100.0
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/king",
+        "stage": "Categoria",
+        "sessions": 24,
+        "rage": 0,
+        "dead": 8.33,
+        "quickback": 40.0,
+        "scroll": 59.86,
+        "friction_score": 96.7
+      }
+    ],
+    "total_sessions": 1668
   }
 ]

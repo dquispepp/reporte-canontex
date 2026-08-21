@@ -1,52 +1,52 @@
 # Resumen pedidos atrasados Canontex — 2026-08-21
 
 ## KPIs
-- Pedidos abiertos: 63,869
-- Atrasados: 806 (1.3%)
-- OTIF: 98.7%
-- Dias atraso promedio: 19.6
-- Sin ingreso WMS: 66
-- Venta futura: 66
-- Reservas sin OV: 9
+- Pedidos abiertos: 63,910
+- Atrasados: 788 (1.2%)
+- OTIF: 98.8%
+- Dias atraso promedio: 19.8
+- Sin ingreso WMS: 32
+- Venta futura: 32
+- Reservas sin OV: 15
 - SLA Ecommerce: 84.2%
 - SLA Operacion: 74.9%
 - SLA Courier: 88.0%
 
 ## Atrasados por diagnostico
-- En tienda, esperando retiro cliente: 546
-- Courier tiene pedido, estado no actualizado en OMS: 90
+- En tienda, esperando retiro cliente: 543
+- Courier tiene pedido, estado no actualizado en OMS: 86
 - SAC devolución de dinero: 46
 - Aún no sale, empujar operación: 24
-- Recontactar cliente: 23
-- En ruta (atraso courier): 18
-- Revisar WMS: no despachado: 16
-- Quiebre SAP: 15
-- FedEx no recolectó, revisar en bodega: 9
-- Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho: 5
-- Courier no encontró destino: 3
-- Quiebre SAP/WMS: 3
+- Recontactar cliente: 22
+- En ruta (atraso courier): 16
+- Revisar WMS: no despachado: 14
+- Quiebre SAP: 14
+- FedEx no recolectó, revisar en bodega: 6
+- Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho: 6
 - Investigar por qué no llegó al WMS: 3
-- validar con SAC: 3
 - Quiebre WMS: 2
+- Courier no encontró destino: 2
+- Quiebre SAP/WMS: 2
+- validar con SAC: 2
 
 ## Atrasados por tipo despacho
-- Cross Docking: 426
-- Retiro en Tienda: 234
-- Despacho a Domicilio: 145
+- Cross Docking: 424
+- Retiro en Tienda: 231
+- Despacho a Domicilio: 132
 - Fecha Pactada: 1
 
 ## Atrasados por transportista
-- Transporte propio: 636
-- BigTicket: 93
-- Fedex2: 45
-- -: 32
+- Transporte propio: 631
+- BigTicket: 88
+- Fedex2: 38
+- -: 31
 
 ## Atrasados por region
-- Metropolitana: 361
+- Metropolitana: 349
 - Libertador General Bernardo OHiggins: 103
 - Coquimbo: 56
 - Los Lagos: 55
-- Antofagasta: 46
+- Antofagasta: 44
 - Bío Bío: 33
 - Valparaiso: 33
 - Ñuble: 31
@@ -78,7 +78,7 @@
 | 001015637 | 1683224 | ECOMMERCE | Preparado | Despacho a Domicilio | BigTicket | 121.0 | Courier tiene pedido, estado no actualizado en OMS | Metropolitana |
 
 ## Retiro en tienda por tienda (top 15)
-- Metropolitana: 204
+- Metropolitana: 201
 - Libertador General Bernardo OHiggins: 97
 - Los Lagos: 44
 - Antofagasta: 40

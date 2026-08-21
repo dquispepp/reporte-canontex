@@ -1852,5 +1852,211 @@
       }
     ],
     "total_sessions": 1668
+  },
+  {
+    "fecha": "2026-08-21",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 2.91,
+        "quickback_pct": 21.43,
+        "scroll_depth": 27.9,
+        "active_time_s": 22.5,
+        "sessions": 826
+      },
+      "Categoria": {
+        "rage_pct": 0.0,
+        "dead_pct": 10.1,
+        "quickback_pct": 27.02,
+        "scroll_depth": 40.1,
+        "active_time_s": 32.8,
+        "sessions": 1040
+      },
+      "Producto": {
+        "rage_pct": 0.0,
+        "dead_pct": 5.82,
+        "quickback_pct": 8.73,
+        "scroll_depth": 45.7,
+        "active_time_s": 26.4,
+        "sessions": 790
+      },
+      "Carrito": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 69.0,
+        "active_time_s": 0.0,
+        "sessions": 1
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 100.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 78.7,
+        "active_time_s": 259.0,
+        "sessions": 1
+      },
+      "Confirmacion": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 77.0,
+        "active_time_s": 44.0,
+        "sessions": 1
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 807,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 75.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 12,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 70,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 67.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-super-king",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 28.57,
+        "scroll": 69.0,
+        "friction_score": 257.1
+      },
+      {
+        "url": "/hoteleria/bano-y-spa/toallas",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 66.67,
+        "quickback": 50.0,
+        "scroll": 55.0,
+        "friction_score": 233.3
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 18,
+        "rage": 0,
+        "dead": 16.67,
+        "quickback": 100.0,
+        "scroll": 70.0,
+        "friction_score": 233.3
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 15,
+        "rage": 0,
+        "dead": 12.5,
+        "quickback": 100.0,
+        "scroll": 64.0,
+        "friction_score": 225.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/almohadas",
+        "stage": "Categoria",
+        "sessions": 20,
+        "rage": 0,
+        "dead": 5.0,
+        "quickback": 100.0,
+        "scroll": 87.04,
+        "friction_score": 210.0
+      },
+      {
+        "url": "/cojin-stonewash-beige-45x45-cm-1.html",
+        "stage": "Producto",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 0,
+        "scroll": 43.0,
+        "friction_score": 207.0
+      },
+      {
+        "url": "/muebles/bergers/linea-audio-bergeres",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 16.67,
+        "quickback": 66.67,
+        "scroll": 37.67,
+        "friction_score": 179.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 40,
+        "rage": 0,
+        "dead": 19.05,
+        "quickback": 52.38,
+        "scroll": 61.47,
+        "friction_score": 142.9
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/king",
+        "stage": "Categoria",
+        "sessions": 12,
+        "rage": 0,
+        "dead": 25.0,
+        "quickback": 44.44,
+        "scroll": 53.1,
+        "friction_score": 138.9
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/plumones-sherpa/plumones-sherpa-1-5-plazas",
+        "stage": "Categoria",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 12.5,
+        "quickback": 50.0,
+        "scroll": 36.2,
+        "friction_score": 138.8
+      },
+      {
+        "url": "/decoracion/alfombras/alfombras-grandes",
+        "stage": "Categoria",
+        "sessions": 32,
+        "rage": 0,
+        "dead": 28.12,
+        "quickback": 34.38,
+        "scroll": 40.84,
+        "friction_score": 134.2
+      },
+      {
+        "url": "/muebles/bergers/bergere-dallas",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 16.67,
+        "quickback": 50.0,
+        "scroll": 58.12,
+        "friction_score": 133.3
+      }
+    ],
+    "total_sessions": 1822
   }
 ]

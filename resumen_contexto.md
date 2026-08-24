@@ -1,12 +1,12 @@
 # Resumen pedidos atrasados Canontex — 2026-08-24
 
 ## KPIs
-- Pedidos abiertos: 64,431
+- Pedidos abiertos: 64,434
 - Atrasados: 815 (1.3%)
 - OTIF: 98.7%
 - Dias atraso promedio: 20.0
-- Sin ingreso WMS: 553
-- Venta futura: 553
+- Sin ingreso WMS: 369
+- Venta futura: 369
 - Reservas sin OV: 15
 - SLA Ecommerce: 84.2%
 - SLA Operacion: 74.9%
@@ -14,20 +14,20 @@
 
 ## Atrasados por diagnostico
 - En tienda, esperando retiro cliente: 562
-- Courier tiene pedido, estado no actualizado en OMS: 89
+- Courier tiene pedido, estado no actualizado en OMS: 92
 - SAC devolución de dinero: 46
-- Aún no sale, empujar operación: 26
+- Aún no sale, empujar operación: 25
 - Recontactar cliente: 21
 - En ruta (atraso courier): 16
-- Revisar WMS: no despachado: 15
 - Quiebre SAP: 14
+- Revisar WMS: no despachado: 12
 - Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho: 7
 - FedEx no recolectó, revisar en bodega: 6
 - Quiebre WMS: 4
 - Investigar por qué no llegó al WMS: 3
+- validar con SAC: 3
 - Courier no encontró destino: 2
 - Quiebre SAP/WMS: 2
-- validar con SAC: 2
 
 ## Atrasados por tipo despacho
 - Cross Docking: 456

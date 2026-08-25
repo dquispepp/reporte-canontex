@@ -2470,5 +2470,211 @@
       }
     ],
     "total_sessions": 2425
+  },
+  {
+    "fecha": "2026-08-25",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.13,
+        "quickback_pct": 21.38,
+        "scroll_depth": 25.8,
+        "active_time_s": 21.2,
+        "sessions": 795
+      },
+      "Categoria": {
+        "rage_pct": 0.06,
+        "dead_pct": 5.51,
+        "quickback_pct": 27.36,
+        "scroll_depth": 39.2,
+        "active_time_s": 34.8,
+        "sessions": 1707
+      },
+      "Producto": {
+        "rage_pct": 0.11,
+        "dead_pct": 6.4,
+        "quickback_pct": 7.84,
+        "scroll_depth": 44.3,
+        "active_time_s": 24.4,
+        "sessions": 906
+      },
+      "Carrito": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 54.0,
+        "active_time_s": 0.0,
+        "sessions": 1
+      },
+      "Checkout": {
+        "rage_pct": 16.67,
+        "dead_pct": 50.0,
+        "quickback_pct": 0.0,
+        "scroll_depth": 70.7,
+        "active_time_s": 145.0,
+        "sessions": 6
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 770,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon",
+        "stage": "Categoria",
+        "sessions": 20,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 68.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/sabana-2-plaza-200-hilos-whisper.html",
+        "stage": "Producto",
+        "sessions": 8,
+        "rage": 0,
+        "dead": 25.0,
+        "quickback": 100.0,
+        "scroll": 74.0,
+        "friction_score": 250.0
+      },
+      {
+        "url": "/bano/toallas",
+        "stage": "Categoria",
+        "sessions": 92,
+        "rage": 0,
+        "dead": 7.61,
+        "quickback": 100.0,
+        "scroll": 38.5,
+        "friction_score": 226.7
+      },
+      {
+        "url": "/descuento-now",
+        "stage": "Categoria",
+        "sessions": 482,
+        "rage": 0,
+        "dead": 2.49,
+        "quickback": 100.0,
+        "scroll": 35.0,
+        "friction_score": 220.0
+      },
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 15,
+        "rage": 0,
+        "dead": 9.09,
+        "quickback": 100.0,
+        "scroll": 80.0,
+        "friction_score": 218.2
+      },
+      {
+        "url": "/alfombra-lana-degrade-beige-160x235-cm.html",
+        "stage": "Producto",
+        "sessions": 92,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 4.35,
+        "scroll": 41.38,
+        "friction_score": 217.3
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 61,
+        "rage": 0,
+        "dead": 6.56,
+        "quickback": 100.0,
+        "scroll": 56.0,
+        "friction_score": 213.1
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 12,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 67.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/2-plazas",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 80.83,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas",
+        "stage": "Categoria",
+        "sessions": 9,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 100.0,
+        "scroll": 66.64,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/sabanas-300-hilos",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 0,
+        "quickback": 80.0,
+        "scroll": 28.5,
+        "friction_score": 181.5
+      },
+      {
+        "url": "/alfombra-terra-quadrum-240x330-cm.html",
+        "stage": "Producto",
+        "sessions": 8,
+        "rage": 12.5,
+        "dead": 37.5,
+        "quickback": 12.5,
+        "scroll": 32.67,
+        "friction_score": 154.8
+      },
+      {
+        "url": "/checkout",
+        "stage": "Checkout",
+        "sessions": 6,
+        "rage": 16.67,
+        "dead": 50.0,
+        "quickback": 0,
+        "scroll": 70.67,
+        "friction_score": 150.0
+      }
+    ],
+    "total_sessions": 2448
   }
 ]

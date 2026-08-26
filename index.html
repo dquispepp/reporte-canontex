@@ -73,6 +73,12 @@ section.diagnosticos h2 { font-family: var(--font-serif); margin: 0 0 16px; font
 .diag-row .cnt { color: var(--muted); font-variant-numeric: tabular-nums; font-weight: 600; }
 .diag-row .bar { height: 6px; background: var(--accent-soft); border-radius: 3px; overflow: hidden; }
 .diag-row .bar .fill { height: 100%; background: var(--accent); }
+.familia-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.familia-table th, .familia-table td { padding: 10px 8px; text-align: left; border-bottom: 1px solid var(--border); }
+.familia-table th { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 600; }
+.familia-table td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.familia-table tr:last-child td { border-bottom: 0; }
+.sla-good { color: var(--ok); } .sla-warn { color: var(--warn); } .sla-bad { color: var(--bad); }
 .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; }
 .badge.periodo { background: var(--accent-soft); color: var(--accent); }
 footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px; }
@@ -111,6 +117,17 @@ footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px
   <section class="diagnosticos">
     <h2>Diagnósticos de atrasados</h2>
     <div class="diag-list" id="diag-list"></div>
+  </section>
+
+  <section class="diagnosticos" style="margin-top:20px">
+    <h2>Atrasos por tipo de envío</h2>
+    <table class="familia-table">
+      <thead><tr>
+        <th>Tipo de envío</th><th class="num">Atrasados</th>
+        <th class="num">SLA Ecommerce</th><th class="num">SLA Operación</th><th class="num">SLA Courier</th>
+      </tr></thead>
+      <tbody id="familia-list"></tbody>
+    </table>
   </section>
 </main>
 
@@ -222,6 +239,35 @@ function aplicar() {
       <div class="bar"><div class="fill" style="width:${(100*cnt/max)}%"></div></div>
       <div class="cnt">${cnt}</div>
     </div>`).join('') : '<div class="diag-row"><div class="name">Sin atrasados en el filtro</div></div>';
+
+  // Resumen por tipo de envio (familia) - para ubicar el cuello de botella
+  // dentro del filtro activo (canal, tipo despacho, transportista, mes, etc),
+  // con el SLA de cada etapa para saber en cual falla ese tipo de envío.
+  const famRows = {};
+  rows.forEach(d => {
+    const k = d.familia || 'Sin clasificar';
+    if (!famRows[k]) famRows[k] = {atr:0, ecomOk:0, ecomN:0, opOk:0, opN:0, courOk:0, courN:0};
+    const f = famRows[k];
+    if (d.atrasado) f.atr++;
+    if (d.sla_ecommerce !== null) { f.ecomN++; if (d.sla_ecommerce) f.ecomOk++; }
+    if (d.sla_operacion !== null) { f.opN++; if (d.sla_operacion) f.opOk++; }
+    if (d.sla_courier !== null) { f.courN++; if (d.sla_courier) f.courOk++; }
+  });
+  const famArr = Object.entries(famRows).sort((a,b) => b[1].atr - a[1].atr);
+  function slaCell(ok, n) {
+    if (n === 0) return '<td class="num">—</td>';
+    const p = 100 * ok / n;
+    const cls = p >= 90 ? 'sla-good' : (p >= 70 ? 'sla-warn' : 'sla-bad');
+    return `<td class="num ${cls}">${p.toFixed(1)}%</td>`;
+  }
+  document.getElementById('familia-list').innerHTML = famArr.length ? famArr.map(([name, f]) => `
+    <tr>
+      <td>${name}</td>
+      <td class="num">${f.atr}</td>
+      ${slaCell(f.ecomOk, f.ecomN)}
+      ${slaCell(f.opOk, f.opN)}
+      ${slaCell(f.courOk, f.courN)}
+    </tr>`).join('') : '<tr><td colspan="5">Sin datos en el filtro</td></tr>';
 }
 
 cargar();

@@ -1,11 +1,11 @@
 ﻿Pagina,Etapa,Sesiones,Rage%,Dead%,Quickback%,Scroll%,Score Friccion
-/evento/liquidacion,Categoria,53,0,100.0,100.0,78.0,400.0
-/dormitorio,Categoria,577,0,100.0,100.0,78.0,400.0
 /evento/liquidacion/ropa-de-cama/plumones,Categoria,65,0,100.0,100.0,79.0,400.0
-/evento/liquidacion/1_5_plazas,Categoria,9,0,11.11,100.0,12.0,260.2
-/cama-1-5-plazas-new-still-200-cm.html,Producto,34,0,5.88,100.0,79.0,211.8
-/12-ropa-de-cama/20-sabanas,Categoria,42,0,4.76,100.0,73.0,209.5
-/manta-piel-fur-grey-127x152-cm.html,Producto,8,0,37.5,0.0,0.0,125.0
-/sabanas-2-plazas-200-hilos-bird.html,Producto,8,0,25.0,0.0,0.0,100.0
-/frazada-super-king-bonded-blush.html,Producto,5,0,20.0,0.0,0.0,90.0
-/evento/liquidacion/2_plazas,Categoria,61,0,3.28,40.0,59.86,86.6
+/evento/liquidacion,Categoria,52,0,100.0,100.0,78.0,400.0
+/evento/liquidacion/ropa-de-cama/sabanas,Categoria,8,0,100.0,100.0,79.0,400.0
+/dormitorio,Categoria,569,0,100.0,100.0,78.0,400.0
+/,Home,2191,0,100.0,100.0,80.0,400.0
+/12-ropa-de-cama/20-sabanas/king_1,Categoria,18,0,5.56,100.0,0.0,261.1
+/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas,Categoria,210,0,9.3,100.0,56.0,218.6
+/12-ropa-de-cama/20-sabanas,Categoria,27,0,5.0,100.0,73.0,210.0
+/12-ropa-de-cama/cubrecamas,Categoria,6,0,0.0,100.0,44.22,205.8
+/12-ropa-de-cama/plumones,Categoria,41,0,0.0,100.0,68.0,200.0

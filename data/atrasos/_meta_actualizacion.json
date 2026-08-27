@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-26",
+  "last_updated": "2026-08-27",
   "fuente": "Pipeline atrasos diario (OMS + WMS + FedEx + BigTicket)",
   "archivos": {
     "atrasos_tendencia.csv": "Historico diario de KPIs de atrasos (acumulativo)",

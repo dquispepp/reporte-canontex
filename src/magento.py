@@ -8,6 +8,7 @@ Flujo:
 3. fetch_pending_last_days(N): pedidos pending/pending_payment que llevan más de N días.
 4. resumen_diario(): combina ambos para alerta.
 """
+import json
 import os
 import time
 from datetime import datetime, timedelta
@@ -84,6 +85,23 @@ def fetch_canceled_last_days(days: int = 3, page_size: int = 100) -> list:
     return data.get("items", [])
 
 
+def _webpay_authorized_amount(payment: dict) -> float:
+    """Para transbank_webpay: si Magento canceló el pedido antes de facturarlo,
+    total_paid/amount_paid/amount_authorized quedan en null aunque Transbank sí
+    haya autorizado el cobro. La única prueba real queda en additional_information
+    (respuesta cruda del gateway)."""
+    if payment.get("method") != "transbank_webpay":
+        return 0.0
+    for item in payment.get("additional_information") or []:
+        try:
+            data = json.loads(item)
+        except (TypeError, ValueError):
+            continue
+        if isinstance(data, dict) and data.get("status") == "AUTHORIZED" and data.get("responseCode") == 0:
+            return float(data.get("amount") or 0)
+    return 0.0
+
+
 def _payment_flags(order: dict) -> dict:
     """Extrae señales de pago del pedido. Un pedido problemático es el que capturó plata pero se canceló."""
     total_paid = float(order.get("total_paid") or 0)
@@ -92,13 +110,15 @@ def _payment_flags(order: dict) -> dict:
     amount_paid = float(p.get("amount_paid") or 0)
     amount_authorized = float(p.get("amount_authorized") or 0)
     last_trans = str(p.get("last_trans_id") or "")
+    webpay_amount = _webpay_authorized_amount(p)
     autorizacion_sin_cerrar = (
         (total_paid > 0 and total_paid > total_refunded)
         or amount_paid > 0
         or (amount_authorized > 0 and amount_paid == 0)
+        or webpay_amount > 0
     ) and not last_trans.endswith("-expire")
     return {
-        "total_paid": total_paid,
+        "total_paid": total_paid or webpay_amount,
         "total_refunded": total_refunded,
         "amount_paid": amount_paid,
         "amount_authorized": amount_authorized,

@@ -1,11 +1,11 @@
 ﻿Pagina,Etapa,Sesiones,Rage%,Dead%,Quickback%,Scroll%,Score Friccion
-/evento/liquidacion/ropa-de-cama/plumones,Categoria,65,0,100.0,100.0,79.0,400.0
-/evento/liquidacion,Categoria,52,0,100.0,100.0,78.0,400.0
-/evento/liquidacion/ropa-de-cama/sabanas,Categoria,8,0,100.0,100.0,79.0,400.0
-/dormitorio,Categoria,569,0,100.0,100.0,78.0,400.0
-/,Home,2191,0,100.0,100.0,80.0,400.0
-/12-ropa-de-cama/20-sabanas/king_1,Categoria,18,0,5.56,100.0,0.0,261.1
-/12-ropa-de-cama/20-sabanas/sabanas-de-algodon/sabanas-2-plazas,Categoria,210,0,9.3,100.0,56.0,218.6
-/12-ropa-de-cama/20-sabanas,Categoria,27,0,5.0,100.0,73.0,210.0
-/12-ropa-de-cama/cubrecamas,Categoria,6,0,0.0,100.0,44.22,205.8
-/12-ropa-de-cama/plumones,Categoria,41,0,0.0,100.0,68.0,200.0
+/plumon-1-5-plazas-summer.html,Producto,9,0,100.0,100.0,45.0,405.0
+/evento/liquidacion/ropa-de-cama/plumones,Categoria,30,0,100.0,100.0,80.0,400.0
+/evento/liquidacion/ropa-de-cama/sabanas,Categoria,5,0,100.0,100.0,79.0,400.0
+/dormitorio,Categoria,514,0,100.0,100.0,78.0,400.0
+/12-ropa-de-cama/plumones,Categoria,30,0,100.0,100.0,68.0,400.0
+/12-ropa-de-cama/20-sabanas,Categoria,36,0,50.0,100.0,62.0,300.0
+/12-ropa-de-cama/20-sabanas/king_1,Categoria,19,0,0.0,100.0,0.0,250.0
+/12-ropa-de-cama/cubrecamas,Categoria,26,0,19.23,100.0,72.0,238.5
+/,Home,2134,0,6.67,100.0,80.0,213.3
+/evento/liquidacion,Categoria,1073,0,6.52,100.0,80.0,213.0

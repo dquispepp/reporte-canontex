@@ -12,6 +12,9 @@
     "ventas_abandono_carrito.csv": "Abandono por etapa del funnel diario",
     "clarity_funnel.csv": "Friccion UX por etapa",
     "clarity_paginas.csv": "Top paginas con mayor friccion",
-    "clarity_historial.json": "Historial diario acumulado Clarity"
+    "clarity_historial.json": "Historial diario acumulado Clarity",
+    "ga4_conversion_diario.csv": "Serie diaria GA4 con tasas por etapa",
+    "funnel_mensual.csv": "Funnel comparativo mes actual vs anterior",
+    "oms_pedidos_diario.csv": "Pedidos OMS diarios por estado y tipo despacho"
   }
 }

@@ -2882,5 +2882,211 @@
       }
     ],
     "total_sessions": 2391
+  },
+  {
+    "fecha": "2026-08-27",
+    "funnel": {
+      "Home": {
+        "rage_pct": 0.0,
+        "dead_pct": 1.41,
+        "quickback_pct": 20.37,
+        "scroll_depth": 18.9,
+        "active_time_s": 59.1,
+        "sessions": 709
+      },
+      "Categoria": {
+        "rage_pct": 0.21,
+        "dead_pct": 12.85,
+        "quickback_pct": 25.29,
+        "scroll_depth": 42.0,
+        "active_time_s": 31.0,
+        "sessions": 819
+      },
+      "Producto": {
+        "rage_pct": 0.25,
+        "dead_pct": 6.51,
+        "quickback_pct": 7.37,
+        "scroll_depth": 44.8,
+        "active_time_s": 32.7,
+        "sessions": 664
+      },
+      "Carrito": {
+        "rage_pct": 0.0,
+        "dead_pct": 0.0,
+        "quickback_pct": 100.0,
+        "scroll_depth": 60.0,
+        "active_time_s": 4.0,
+        "sessions": 1
+      },
+      "Checkout": {
+        "rage_pct": 0.0,
+        "dead_pct": 12.5,
+        "quickback_pct": 12.5,
+        "scroll_depth": 75.3,
+        "active_time_s": 43.7,
+        "sessions": 5
+      },
+      "Confirmacion": {
+        "rage_pct": 0,
+        "dead_pct": 0,
+        "quickback_pct": 0,
+        "scroll_depth": 0,
+        "active_time_s": 0,
+        "sessions": 0
+      }
+    },
+    "top_friction": [
+      {
+        "url": "/evento/liquidacion",
+        "stage": "Categoria",
+        "sessions": 15,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 80.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/almohadas",
+        "stage": "Categoria",
+        "sessions": 21,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 100.0,
+        "scroll": 78.0,
+        "friction_score": 400.0
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 66.67,
+        "scroll": 65.75,
+        "friction_score": 333.3
+      },
+      {
+        "url": "/bano/toallas/toallas-de-bano",
+        "stage": "Categoria",
+        "sessions": 53,
+        "rage": 0,
+        "dead": 20.75,
+        "quickback": 100.0,
+        "scroll": 48.0,
+        "friction_score": 243.5
+      },
+      {
+        "url": "/12-ropa-de-cama/56-mantas-y-pieceras",
+        "stage": "Categoria",
+        "sessions": 27,
+        "rage": 0,
+        "dead": 18.52,
+        "quickback": 100.0,
+        "scroll": 79.0,
+        "friction_score": 237.0
+      },
+      {
+        "url": "/12-ropa-de-cama/20-sabanas/2_plazas",
+        "stage": "Categoria",
+        "sessions": 14,
+        "rage": 0,
+        "dead": 14.29,
+        "quickback": 100.0,
+        "scroll": 63.33,
+        "friction_score": 228.6
+      },
+      {
+        "url": "/evento/liquidacion/ropa-de-cama/plumones/2_plazas",
+        "stage": "Categoria",
+        "sessions": 5,
+        "rage": 0,
+        "dead": 50.0,
+        "quickback": 60.0,
+        "scroll": 76.0,
+        "friction_score": 220.0
+      },
+      {
+        "url": "/",
+        "stage": "Home",
+        "sessions": 697,
+        "rage": 0,
+        "dead": 1.43,
+        "quickback": 100.0,
+        "scroll": 39.0,
+        "friction_score": 213.9
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/king_1",
+        "stage": "Categoria",
+        "sessions": 9,
+        "rage": 0,
+        "dead": 55.56,
+        "quickback": 50.0,
+        "scroll": 66.0,
+        "friction_score": 211.1
+      },
+      {
+        "url": "/blog/como-eliminar-pulgas-de-cama.html",
+        "stage": "Producto",
+        "sessions": 24,
+        "rage": 0,
+        "dead": 100.0,
+        "quickback": 0,
+        "scroll": 61.0,
+        "friction_score": 200.0
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones/plumones-sherpa/plumones-sherpa-1-5-plazas",
+        "stage": "Categoria",
+        "sessions": 6,
+        "rage": 0,
+        "dead": 33.33,
+        "quickback": 50.0,
+        "scroll": 37.56,
+        "friction_score": 179.1
+      },
+      {
+        "url": "/12-ropa-de-cama/cubrecamas/king",
+        "stage": "Categoria",
+        "sessions": 19,
+        "rage": 0,
+        "dead": 15.79,
+        "quickback": 58.33,
+        "scroll": 59.62,
+        "friction_score": 148.2
+      },
+      {
+        "url": "/12-ropa-de-cama/plumones",
+        "stage": "Categoria",
+        "sessions": 11,
+        "rage": 0,
+        "dead": 18.18,
+        "quickback": 54.55,
+        "scroll": 68.0,
+        "friction_score": 145.5
+      },
+      {
+        "url": "/hoteleria/almohadas",
+        "stage": "Categoria",
+        "sessions": 11,
+        "rage": 0,
+        "dead": 36.36,
+        "quickback": 27.27,
+        "scroll": 43.48,
+        "friction_score": 133.8
+      },
+      {
+        "url": "/dormitorio/camas-europeas/camas-2-plazas",
+        "stage": "Categoria",
+        "sessions": 7,
+        "rage": 0,
+        "dead": 28.57,
+        "quickback": 28.57,
+        "scroll": 32.14,
+        "friction_score": 132.1
+      }
+    ],
+    "total_sessions": 2196
   }
 ]

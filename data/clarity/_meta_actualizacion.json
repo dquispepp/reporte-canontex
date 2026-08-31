@@ -1,7 +1,7 @@
 {
-  "last_updated": "2026-08-28",
-  "period_main": "2026-08-01 a 2026-08-27",
-  "period_comparison": "2025-08-01 a 2025-08-27",
+  "last_updated": "2026-08-31",
+  "period_main": "2026-08-01 a 2026-08-30",
+  "period_comparison": "2025-08-01 a 2025-08-30",
   "fuente_ga4": "GA4 Property 352982057",
   "fuente_oms": "OMS Reporteria canal Ecommerce",
   "fuente_clarity": "Microsoft Clarity Project o8vc0cwjrq",
@@ -15,6 +15,8 @@
     "clarity_historial.json": "Historial diario acumulado Clarity",
     "ga4_conversion_diario.csv": "Serie diaria GA4 con tasas por etapa",
     "funnel_mensual.csv": "Funnel comparativo mes actual vs anterior",
-    "oms_pedidos_diario.csv": "Pedidos OMS diarios por estado y tipo despacho"
+    "oms_pedidos_diario.csv": "Pedidos OMS diarios por estado y tipo despacho",
+    "gopersonal_diario.csv": "Funnel diario del canal gopersonal (personalizacion/leads)",
+    "gopersonal_eventos.csv": "Eventos GA4 del canal gopersonal, mes en curso"
   }
 }

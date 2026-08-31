@@ -1,32 +1,31 @@
 # Resumen pedidos atrasados Canontex — 2026-08-31
 
 ## KPIs
-- Pedidos abiertos: 65,666
+- Pedidos abiertos: 65,667
 - Atrasados: 783 (1.2%)
 - OTIF: 98.8%
 - Dias atraso promedio: 21.7
 - Sin ingreso WMS: 45
 - Venta futura: 45
-- Reservas sin OV: 11
+- Reservas sin OV: 10
 - SLA Ecommerce: 84.2%
 - SLA Operacion: 74.8%
 - SLA Courier: 88.0%
 
 ## Atrasados por diagnostico
-- En tienda, esperando retiro cliente: 596
-- Courier tiene pedido, estado no actualizado en OMS: 61
+- En tienda, esperando retiro cliente: 613
+- Courier tiene pedido, estado no actualizado en OMS: 62
 - SAC devolución de dinero: 45
 - En ruta (atraso courier): 18
 - Recontactar cliente: 17
-- Quiebre SAP: 14
-- Revisar WMS: no despachado: 10
+- Revisar WMS: no despachado: 11
 - FedEx no recolectó, revisar en bodega: 5
-- Aún no sale, empujar operación: 4
 - Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho: 4
 - Investigar por qué no llegó al WMS: 3
-- Quiebre WMS: 3
-- Quiebre SAP/WMS: 2
+- Aún no sale, empujar operación: 2
 - Courier no encontró destino: 1
+- Quiebre WMS: 1
+- validar con SAC: 1
 
 ## Atrasados por tipo despacho
 - Cross Docking: 473
@@ -36,9 +35,9 @@
 
 ## Atrasados por transportista
 - Transporte propio: 686
-- BigTicket: 53
+- BigTicket: 54
 - Fedex2: 36
-- -: 8
+- -: 7
 
 ## Atrasados por region
 - Metropolitana: 313
@@ -77,17 +76,17 @@
 | 001015691 | 1683287 | ECOMMERCE | Preparado | Despacho a Domicilio | BigTicket | 127.0 | Courier tiene pedido, estado no actualizado en OMS | Metropolitana |
 
 ## Retiro en tienda por tienda (top 15)
-- Metropolitana: 204
-- Libertador General Bernardo OHiggins: 78
-- Antofagasta: 68
-- Los Lagos: 63
+- Metropolitana: 208
+- Libertador General Bernardo OHiggins: 82
+- Los Lagos: 69
+- Antofagasta: 69
 - Coquimbo: 41
 - Valparaiso: 34
 - Bio Bio: 32
 - Ñuble: 29
-- Bío Bío: 22
+- Bío Bío: 23
+- Araucania: 10
 - Valparaíso: 10
-- Araucania: 9
 - Los Rios: 5
 - Araucanía: 1
 

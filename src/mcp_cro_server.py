@@ -127,6 +127,27 @@ def get_clarity_paginas_friccion(top: int = 15) -> list[dict]:
 
 
 @mcp.tool()
+def get_gopersonal_diario(dias: int = 30) -> list[dict]:
+    """Funnel diario del canal gopersonal (personalizacion/leads, source/medium
+    de GA4 que contiene 'gopersonal'): sesiones, add to cart, checkouts,
+    compras GA4, revenue y tasa de conversion.
+    Args:
+        dias: cuántos días recientes devolver (default 30).
+    """
+    df = _read_csv("gopersonal_diario.csv")
+    return _df_to_records(df, tail=dias)
+
+
+@mcp.tool()
+def get_gopersonal_eventos() -> list[dict]:
+    """Eventos GA4 del canal gopersonal del mes en curso (page_view, add_to_cart,
+    begin_checkout, generate_lead, purchase, etc.) con cantidad de eventos y
+    usuarios únicos, ordenados de mayor a menor volumen."""
+    df = _read_csv("gopersonal_eventos.csv")
+    return _df_to_records(df)
+
+
+@mcp.tool()
 def get_oms_pedidos_diario(dias: int = 14) -> list[dict]:
     """Pedidos OMS por día: total, entregados, anulados, en proceso,
     despacho a domicilio vs retiro en tienda.

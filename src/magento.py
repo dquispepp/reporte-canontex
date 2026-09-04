@@ -64,6 +64,25 @@ def _get(path: str, params: dict, retries: int = 3) -> dict:
     return {}
 
 
+def _fetch_paginado(params: dict, page_size: int) -> list:
+    """Trae TODAS las paginas de /V1/orders para los filtros dados.
+    fetch_canceled_last_days/fetch_closed_last_days/fetch_pending_last_days
+    filtran por ventanas con mas de page_size pedidos con facilidad (Magento
+    devuelve por entity_id ascendente), asi que sin paginar se pierden
+    silenciosamente los pedidos mas nuevos de la ventana."""
+    items = []
+    page = 1
+    while True:
+        params["searchCriteria[currentPage]"] = page
+        data = _get("/rest/V1/orders", params)
+        batch = data.get("items", [])
+        items.extend(batch)
+        if len(batch) < page_size:
+            break
+        page += 1
+    return items
+
+
 def fetch_canceled_last_days(days: int = 3, page_size: int = 100) -> list:
     """Trae pedidos con status in (canceled, oc_cancel) actualizados en los últimos N días.
 
@@ -81,8 +100,7 @@ def fetch_canceled_last_days(days: int = 3, page_size: int = 100) -> list:
         "searchCriteria[filter_groups][1][filters][0][condition_type]": "gteq",
         "searchCriteria[pageSize]": page_size,
     }
-    data = _get("/rest/V1/orders", params)
-    return data.get("items", [])
+    return _fetch_paginado(params, page_size)
 
 
 def _webpay_authorized_amount(payment: dict) -> float:
@@ -147,6 +165,54 @@ def filter_with_payment(orders: list) -> list:
     return salida
 
 
+def fetch_closed_last_days(days: int = 3, page_size: int = 100) -> list:
+    """Trae pedidos 'closed' actualizados en los últimos N días.
+
+    "closed" generalmente son devoluciones ya procesadas por el ERP (ver
+    memoria feedback-magento-cancelados) y por eso se excluyen de
+    fetch_canceled_last_days. Pero un subconjunto sí requiere gestión: ver
+    filter_closed_sin_reembolso.
+    """
+    desde = (datetime.now() - timedelta(days=days)).strftime("%Y-%m-%d 00:00:00")
+    params = {
+        "searchCriteria[filter_groups][0][filters][0][field]": "status",
+        "searchCriteria[filter_groups][0][filters][0][value]": "closed",
+        "searchCriteria[filter_groups][0][filters][0][condition_type]": "eq",
+        "searchCriteria[filter_groups][1][filters][0][field]": "updated_at",
+        "searchCriteria[filter_groups][1][filters][0][value]": desde,
+        "searchCriteria[filter_groups][1][filters][0][condition_type]": "gteq",
+        "searchCriteria[pageSize]": page_size,
+    }
+    return _fetch_paginado(params, page_size)
+
+
+def filter_closed_sin_reembolso(orders: list) -> list:
+    """Deja solo 'closed' con pago capturado y total_refunded=0 (plata sin conciliar).
+
+    A diferencia de filter_with_payment, exige refund=0 explícito: un closed
+    totalmente reembolsado (total_paid == total_refunded) no requiere gestión,
+    aunque amount_paid siga marcando >0 en el payment original.
+    """
+    salida = []
+    for o in orders:
+        flags = _payment_flags(o)
+        dinero_capturado = flags["total_paid"] > 0 or flags["amount_paid"] > 0
+        sin_reembolso = flags["total_refunded"] == 0
+        if dinero_capturado and sin_reembolso:
+            salida.append({
+                "increment_id": o.get("increment_id"),
+                "created_at": o.get("created_at"),
+                "updated_at": o.get("updated_at"),
+                "status": o.get("status"),
+                "grand_total": o.get("grand_total"),
+                "cliente": f"{o.get('customer_firstname','')} {o.get('customer_lastname','')}".strip(),
+                "email": o.get("customer_email"),
+                "metodo_pago": (o.get("payment") or {}).get("method"),
+                **flags,
+            })
+    return salida
+
+
 def fetch_pending_last_days(days: int = 3, max_days: int = 30, page_size: int = 100) -> list:
     """Trae pedidos pending/pending_payment creados entre max_days y days atrás."""
     desde = (datetime.now() - timedelta(days=max_days)).strftime("%Y-%m-%d 00:00:00")
@@ -163,8 +229,7 @@ def fetch_pending_last_days(days: int = 3, max_days: int = 30, page_size: int = 
         "searchCriteria[filter_groups][2][filters][0][condition_type]": "gteq",
         "searchCriteria[pageSize]": page_size,
     }
-    data = _get("/rest/V1/orders", params)
-    return data.get("items", [])
+    return _fetch_paginado(params, page_size)
 
 
 def filter_pending_with_payment(orders: list) -> list:
@@ -196,6 +261,15 @@ def resumen_diario(days: int = 3) -> dict:
     orders_cancel = fetch_canceled_last_days(days=days)
     casos_cancel = filter_with_payment(orders_cancel)
 
+    # Closed sin reembolso (subconjunto de "closed" que sí requiere gestión)
+    try:
+        orders_closed = fetch_closed_last_days(days=days)
+        casos_closed = filter_closed_sin_reembolso(orders_closed)
+    except Exception as e:
+        print(f"[MAGENTO] Error consultando closed: {e}")
+        orders_closed = []
+        casos_closed = []
+
     # Pendientes > N días
     try:
         orders_pending = fetch_pending_last_days(days=days)
@@ -211,6 +285,9 @@ def resumen_diario(days: int = 3) -> dict:
         "total_cancelados_revisados": len(orders_cancel),
         "cancelados_con_pago": len(casos_cancel),
         "casos_cancelados": casos_cancel,
+        "total_closed_revisados": len(orders_closed),
+        "closed_sin_reembolso": len(casos_closed),
+        "casos_closed_sin_reembolso": casos_closed,
         "total_pendientes": len(orders_pending),
         "casos_pendientes": casos_pending,
     }

@@ -1,15 +1,15 @@
 ﻿diagnostico,pedidos,dias_prom,dias_max
-"En tienda, esperando retiro cliente",696,16.5,167.0
-SAC devolución de dinero,46,58.4,171.0
-"Courier tiene pedido, estado no actualizado en OMS",38,24.5,111.0
-Revisar WMS: no despachado,19,9.6,55.0
-Recontactar cliente,16,33.1,71.0
-En ruta (atraso courier),14,22.0,87.0
-Investigar por qué no llegó al WMS,4,12.0,28.0
-"Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho",3,17.7,20.0
-"Aún no sale, empujar operación",3,1.3,2.0
-"FedEx no recolectó, revisar en bodega",3,15.0,17.0
-validar con SAC,3,4.7,10.0
-Courier no encontró destino,1,32.0,32.0
-Quiebre WMS,1,19.0,19.0
-Fedex no va siempre en la semana,1,2.0,2.0
+"En tienda, esperando retiro cliente",736,16.6,169.0
+SAC devolución de dinero,47,59.1,173.0
+"Courier tiene pedido, estado no actualizado en OMS",38,25.6,113.0
+En ruta (atraso courier),21,16.4,89.0
+Recontactar cliente,18,30.9,73.0
+Investigar por qué no llegó al WMS,7,9.1,30.0
+Revisar WMS: no despachado,4,17.8,21.0
+Fedex no va siempre en la semana,3,2.0,4.0
+validar con SAC,3,6.7,12.0
+"FedEx no recolectó, revisar en bodega",2,18.5,19.0
+"Aún no sale, empujar operación",1,1.0,1.0
+Courier no encontró destino,1,34.0,34.0
+Quiebre WMS,1,21.0,21.0
+"Operación: WMS despachó pero OMS sigue en Creado, validar medio de despacho",1,22.0,22.0

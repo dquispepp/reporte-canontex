@@ -1,51 +1,51 @@
 ﻿envio_norm,orden_compra_norm,canal,estado,tipo_despacho,transportista,dias_atraso,diagnostico,region,fecha_trx,fecha_compromiso
-000987598,1648150,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,171.0,SAC devolución de dinero,Metropolitana,2025-12-16,2025-12-29
-000988600,1648750,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,167.0,SAC devolución de dinero,Metropolitana,2025-12-17,2025-12-30
-000990691,1650526,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,167.0,"En tienda, esperando retiro cliente",Metropolitana,2025-12-22,2026-01-07
-000987613,1648159,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,160.0,"En tienda, esperando retiro cliente",Metropolitana,2025-12-16,2026-01-08
-000990697,1650376,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,160.0,SAC devolución de dinero,Valparaíso,2025-12-21,2026-01-01
-000991006,1650937,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,159.0,"En tienda, esperando retiro cliente",Libertador General Bernardo OHiggins,2025-12-22,2026-01-09
-000992632,1653022,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,159.0,SAC devolución de dinero,Metropolitana,2025-12-28,2026-01-09
-000998042,1659935,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,149.0,"En tienda, esperando retiro cliente",Metropolitana,2026-01-12,2026-01-23
-001003244,1666706,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,145.0,SAC devolución de dinero,Metropolitana,2026-01-22,2026-01-27
-001004570,1668428,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,145.0,SAC devolución de dinero,Metropolitana,2026-01-25,2026-01-29
-001010417,1676213,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,134.0,"En tienda, esperando retiro cliente",Metropolitana,2026-02-06,2026-02-13
-001011143,1677251,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,134.0,SAC devolución de dinero,Libertador General Bernardo OHiggins,2026-02-07,2026-02-13
-001016516,1684343,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,125.0,SAC devolución de dinero,Metropolitana,2026-02-19,2026-02-25
-001028213,1695809,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,111.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-16,2026-03-18
-001030839,1699257,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,103.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21,2026-03-25
-001030968,1699437,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,103.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21,2026-03-25
-001031043,1699512,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,103.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21,2026-03-25
-001032531,1701468,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,103.0,"En tienda, esperando retiro cliente",Bío Bío,2026-03-22,2026-03-25
-001033557,1702872,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,103.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-23,2026-03-31
-001038888,1710003,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,102.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-29,2026-04-01
-001041822,1713747,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,101.0,SAC devolución de dinero,Metropolitana,2026-03-31,2026-04-02
-001035759,1705731,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,98.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-26,2026-04-01
-001036503,1706784,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,96.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-27,2026-04-02
-001043703,1716045,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,93.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-02,2026-04-08
-001048663,1722478,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,92.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-04-08,2026-04-15
-001050133,1724368,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,90.0,"En tienda, esperando retiro cliente",Libertador General Bernardo OHiggins,2026-04-10,2026-04-17
-001054438,1729978,ECOMMERCE,En Courier,Despacho a Domicilio,Fedex2,87.0,En ruta (atraso courier),Bío Bío,2026-04-21,2026-04-24
-001053592,1728868,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,84.0,"En tienda, esperando retiro cliente",Los Lagos,2026-04-19,2026-04-27
-001054135,1729561,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,84.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-20,2026-04-29
-001054645,1730239,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,84.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-21,2026-04-29
-001053145,1728277,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,81.0,"En tienda, esperando retiro cliente",Los Lagos,2026-04-18,2026-04-27
-001055740,1731640,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,81.0,SAC devolución de dinero,Los Lagos,2026-04-24,2026-05-04
-001062205,1739983,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,75.0,SAC devolución de dinero,Metropolitana,2026-05-05,2026-05-08
-001055992,1732003,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,74.0,"En tienda, esperando retiro cliente",Metropolitana,2026-04-25,2026-05-05
-001063288,1741282,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,74.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-07,2026-05-12
-001064524,1742836,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,72.0,SAC devolución de dinero,Metropolitana,2026-05-10,2026-05-13
-001061974,1739713,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,71.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-05,2026-05-14
-001062040,1739785,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,71.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-05,2026-05-14
-001062577,1740418,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,71.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-06,2026-05-18
-001064572,1742902,ECOMMERCE,Rechazado,Despacho a Domicilio,Fedex2,71.0,Recontactar cliente,Antofagasta,2026-05-10,2026-05-19
-3915736371,391573637,KIOSCO,Rechazado,Despacho a Domicilio,BigTicket,70.0,Recontactar cliente,Metropolitana,2026-05-11,2026-05-20
-001066897,1745959,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,68.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-15,2026-05-20
-001067086,1746208,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,66.0,SAC devolución de dinero,Metropolitana,2026-05-16,2026-05-20
-3315984534,331598453,KIOSCO,Preparado,Cross Docking,Transporte propio,66.0,"En tienda, esperando retiro cliente",Los Lagos,2026-05-17,2026-05-25
-001069816,1749928,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,65.0,SAC devolución de dinero,Metropolitana,2026-05-20,2026-05-26
-001072252,1753381,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,65.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-23,2026-05-27
-001072078,1753132,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,63.0,SAC devolución de dinero,Metropolitana,2026-05-23,2026-05-28
-3915749213,391574921,KIOSCO,Listo Para Retiro,Retiro en Tienda,Transporte propio,61.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-12,2026-05-25
-001087046,1773113,ECOMMERCE,Rechazado,Despacho a Domicilio,BigTicket,61.0,Recontactar cliente,Metropolitana,2026-06-01,2026-06-03
-001087691,1773860,ECOMMERCE,Rechazado,Despacho a Domicilio,BigTicket,61.0,Recontactar cliente,Metropolitana,2026-06-01,2026-06-03
+000987598,1648150,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,173.0,SAC devolución de dinero,Metropolitana,2025-12-16,2025-12-29
+000988600,1648750,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,169.0,SAC devolución de dinero,Metropolitana,2025-12-17,2025-12-30
+000990691,1650526,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,169.0,"En tienda, esperando retiro cliente",Metropolitana,2025-12-22,2026-01-07
+000990697,1650376,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,162.0,SAC devolución de dinero,Valparaíso,2025-12-21,2026-01-01
+000991006,1650937,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,161.0,"En tienda, esperando retiro cliente",Libertador General Bernardo OHiggins,2025-12-22,2026-01-09
+000992632,1653022,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,161.0,SAC devolución de dinero,Metropolitana,2025-12-28,2026-01-09
+000998042,1659935,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,151.0,"En tienda, esperando retiro cliente",Metropolitana,2026-01-12,2026-01-23
+001003244,1666706,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,147.0,SAC devolución de dinero,Metropolitana,2026-01-22,2026-01-27
+001004570,1668428,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,147.0,SAC devolución de dinero,Metropolitana,2026-01-25,2026-01-29
+001010417,1676213,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,136.0,"En tienda, esperando retiro cliente",Metropolitana,2026-02-06,2026-02-13
+001011143,1677251,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,136.0,SAC devolución de dinero,Libertador General Bernardo OHiggins,2026-02-07,2026-02-13
+001016516,1684343,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,127.0,SAC devolución de dinero,Metropolitana,2026-02-19,2026-02-25
+001028213,1695809,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,113.0,"Courier tiene pedido, estado no actualizado en OMS",Metropolitana,2026-03-16,2026-03-18
+001030839,1699257,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,105.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21,2026-03-25
+001030968,1699437,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,105.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21,2026-03-25
+001031043,1699512,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,105.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-21,2026-03-25
+001032531,1701468,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,105.0,"En tienda, esperando retiro cliente",Bío Bío,2026-03-22,2026-03-25
+001033557,1702872,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,105.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-23,2026-03-31
+001038888,1710003,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,104.0,"En tienda, esperando retiro cliente",Metropolitana,2026-03-29,2026-04-01
+001041822,1713747,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,103.0,SAC devolución de dinero,Metropolitana,2026-03-31,2026-04-02
+001035759,1705731,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,100.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-03-26,2026-04-01
+001043703,1716045,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,95.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-02,2026-04-08
+001048663,1722478,ECOMMERCE,Preparado,Retiro en Tienda,Transporte propio,94.0,"Courier tiene pedido, estado no actualizado en OMS",Bío Bío,2026-04-08,2026-04-15
+001050133,1724368,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,92.0,"En tienda, esperando retiro cliente",Libertador General Bernardo OHiggins,2026-04-10,2026-04-17
+001054438,1729978,ECOMMERCE,En Courier,Despacho a Domicilio,Fedex2,89.0,En ruta (atraso courier),Bío Bío,2026-04-21,2026-04-24
+001053592,1728868,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,86.0,"En tienda, esperando retiro cliente",Los Lagos,2026-04-19,2026-04-27
+001054135,1729561,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,86.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-20,2026-04-29
+001054645,1730239,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,86.0,"En tienda, esperando retiro cliente",Bío Bío,2026-04-21,2026-04-29
+001053145,1728277,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,83.0,"En tienda, esperando retiro cliente",Los Lagos,2026-04-18,2026-04-27
+001055740,1731640,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,83.0,SAC devolución de dinero,Los Lagos,2026-04-24,2026-05-04
+001062205,1739983,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,77.0,SAC devolución de dinero,Metropolitana,2026-05-05,2026-05-08
+001055992,1732003,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,76.0,"En tienda, esperando retiro cliente",Metropolitana,2026-04-25,2026-05-05
+001063288,1741282,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,76.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-07,2026-05-12
+001064524,1742836,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,74.0,SAC devolución de dinero,Metropolitana,2026-05-10,2026-05-13
+001062577,1740418,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,73.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-06,2026-05-18
+001064572,1742902,ECOMMERCE,Rechazado,Despacho a Domicilio,Fedex2,73.0,Recontactar cliente,Antofagasta,2026-05-10,2026-05-19
+3915736371,391573637,KIOSCO,Rechazado,Despacho a Domicilio,BigTicket,72.0,Recontactar cliente,Metropolitana,2026-05-11,2026-05-20
+001066897,1745959,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,70.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-15,2026-05-20
+001067086,1746208,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,68.0,SAC devolución de dinero,Metropolitana,2026-05-16,2026-05-20
+3315984534,331598453,KIOSCO,Preparado,Cross Docking,Transporte propio,68.0,"En tienda, esperando retiro cliente",Los Lagos,2026-05-17,2026-05-25
+001069816,1749928,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,67.0,SAC devolución de dinero,Metropolitana,2026-05-20,2026-05-26
+001072252,1753381,ECOMMERCE,Listo Para Retiro,Retiro en Tienda,Transporte propio,67.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-23,2026-05-27
+001072078,1753132,ECOMMERCE,Rechazado,Retiro en Tienda,Transporte propio,65.0,SAC devolución de dinero,Metropolitana,2026-05-23,2026-05-28
+3915749213,391574921,KIOSCO,Listo Para Retiro,Retiro en Tienda,Transporte propio,63.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-12,2026-05-25
+001087046,1773113,ECOMMERCE,Rechazado,Despacho a Domicilio,BigTicket,63.0,Recontactar cliente,Metropolitana,2026-06-01,2026-06-03
+001087691,1773860,ECOMMERCE,Rechazado,Despacho a Domicilio,BigTicket,63.0,Recontactar cliente,Metropolitana,2026-06-01,2026-06-03
+3315982161,331598216,KIOSCO,Rechazado,Despacho a Domicilio,BigTicket,61.0,Recontactar cliente,Metropolitana,2026-06-03,2026-06-05
+001104578,1795655,ECOMMERCE,En Courier,Despacho a Domicilio,Fedex2,60.0,En ruta (atraso courier),Los Lagos,2026-06-03,2026-06-08
+001110734,1804706,ECOMMERCE,En Courier,Despacho a Domicilio,Fedex2,60.0,En ruta (atraso courier),Bío Bío,2026-06-03,2026-06-08
+3916083424,391608342,KIOSCO,Preparado,Cross Docking,Transporte propio,59.0,"En tienda, esperando retiro cliente",Metropolitana,2026-05-28,2026-06-05
